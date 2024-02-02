@@ -58,10 +58,8 @@ p {
 }
 
 #main-content {
-	max-width: 1280px;
 	height: 100%;
 	flex: 1;
-	background-color: rgba(227, 216, 183, 0.4);
 }
 
 #header {
@@ -70,6 +68,7 @@ p {
 	justify-content: space-between;
 	font-size: var(--font-xl);
 	margin-bottom: var(--space-m);
+	background-color: rgba(227, 216, 183, 0.3);
 }
 
 #content {
