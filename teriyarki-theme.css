@@ -6,11 +6,11 @@
 	
 	--beige: #ECE7CA;
 	
-	--font-xs: 12px;
-	--font-s: 14px;
-	--font-m: 16px;
-	--font-l: 18px;
-	--font-xl: 20px;
+	--font-xs: 14px;
+	--font-s: 16px;
+	--font-m: 18px;
+	--font-l: 20px;
+	--font-xl: 22px;
 	--font-heading4: 24px; 
 
 	--space-xs: 5px;
@@ -35,7 +35,7 @@ body {
 	height: 100%;
 	background-color: var(--main-color);
 	color: white;
-	font-size: var(--font-heading4);
+	font-size: var(--font-m);
 	font-family: 'PT Sans Narrow', sans-serif;
 	overflow: hidden;
 	display: flex;
@@ -52,9 +52,11 @@ body {
 
 #header {
 	padding: var(--space-s) 0;
+	display: flex;
+	justify-content:space-between;
+	font-size: var(--font-heading4);
 }
 
 #content {
 	
-	height: 100%;
 }
