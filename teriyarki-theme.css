@@ -6,6 +6,12 @@
 	
 	--beige: #ECE7CA;
 	
+	--gray-light: #E4E4E4;
+	--gray: #CDCFCC;
+	--gray-mid: #9A9C99;
+	--gray-mid-dark: #7B7D7A;
+	--gray-dark: #5D5E60;
+	
 	--font-xs: 14px;
 	--font-s: 16px;
 	--font-m: 18px;
@@ -22,11 +28,6 @@
 	--space-m: 15px;
 	--space-l: 20px;
 	--space-xl: 25px;
-	
-	--gray-light: #E4E4E4;
-	--gray: #CDCFCC;
-	--gray-mid: #9A9C99;
-	--gray-dark: #5D5E60;
 	
 }
 
@@ -205,6 +206,8 @@ p {
 .content-container {
 	background-color: var(--gray-dark);
 	padding: var(--space-s);
-	border: solid var(--gray-mid) 2px;
+	border: solid var(--gray-mid) 1px;
 	border-radius: 10px;
+	box-shadow: inset 1px 1px 4px 1px var(--gray-mid-dark),
+		inset -1px -1px 4px 1px var(--gray-mid-dark);
 }
