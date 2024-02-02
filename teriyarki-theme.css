@@ -62,7 +62,7 @@ body {
 }
 
 #content {
-	
+	padding: 0 var(--space-m);
 }
 
 /*====== Margins ======*/
@@ -190,8 +190,8 @@ body {
 /*====== Icon specific overrides ======*/
 
 #header .fa-solid.fa-spin {
-	-webkit-animation-duration: var(--fa-animation-duration, 3s);
-    animation-duration: var(--fa-animation-duration, 3s);
+	-webkit-animation-duration: var(--fa-animation-duration, 4s);
+    animation-duration: var(--fa-animation-duration, 4s);
 }
 
 /*====== Display rules ======*/
