@@ -19,23 +19,26 @@ html {
 	height: 100vh;
 }
 
-html, body {
+html, body, p {
 	margin: 0;
 	padding: 0;
 	border: 0;
 }
 
 body {
+	height: 100%;
 	background-color: var(--main-color);
 	color: white;
 	font-size: var(--font-heading4);
 	font-family: 'PT Sans Narrow', sans-serif;
 	overflow: hidden;
-	height: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 #main-content {
 	max-width: 1280px;
 	height: 100%;
 	background-color: rgba(227, 216, 183, 0.5);
+	flex: 1;
 }
