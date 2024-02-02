@@ -61,6 +61,178 @@ body {
 	
 }
 
+/*====== Margins ======*/
+/*====== All Sides ======*/
+.margin-all-xs {
+  margin: var(--space-xs);
+}
+.margin-all-s {
+  margin: var(--space-s);
+}
+.margin-all-m {
+  margin: var(--space-m);
+}
+.margin-all-l {
+  margin: var(--space-l);
+}
+.margin-all-xl {
+  margin: var(--space-xl);
+}
+
+/*====== Right ======*/
+.margin-right-xs {
+  margin-right: var(--space-xs);
+}
+.margin-right-s {
+  margin-right: var(--space-s);
+}
+.margin-right-m {
+  margin-right: var(--space-m);
+}
+.margin-right-l {
+  margin-right: var(--space-l);
+}
+.margin-right-xl {
+  margin-right: var(--space-xl);
+}
+
+/*====== Left ======*/
+.margin-left-xs {
+  margin-left: var(--space-xs);
+}
+.margin-left-s {
+  margin-left: var(--space-s);
+}
+.margin-left-m {
+  margin-left: var(--space-m);
+}
+.margin-left-l {
+  margin-left: var(--space-l);
+}
+.margin-left-xl {
+  margin-left: var(--space-xl);
+}
+
+/*====== Top ======*/
+.margin-top-xs {
+  margin-top: var(--space-xs);
+}
+.margin-top-s {
+  margin-top: var(--space-s);
+}
+.margin-top-m {
+  margin-top: var(--space-m);
+}
+.margin-top-l {
+  margin-top: var(--space-l);
+}
+.margin-top-xl {
+  margin-top: var(--space-xl);
+}
+
+/*====== Bottom ======*/
+.margin-bottom-xs {
+  margin-bottom: var(--space-xs);
+}
+.margin-bottom-s {
+  margin-bottom: var(--space-s);
+}
+.margin-bottom-m {
+  margin-bottom: var(--space-m);
+}
+.margin-bottom-l {
+  margin-bottom: var(--space-l);
+}
+.margin-bottom-xl {
+  margin-bottom: var(--space-xl);
+}
+
+/*====== Paddings ======*/
+/*====== All Sides ======*/
+.padding-all-xs {
+  padding: var(--space-xs);
+}
+.padding-all-s {
+  padding: var(--space-s);
+}
+.padding-all-m {
+  padding: var(--space-m);
+}
+.padding-all-l {
+  padding: var(--space-l);
+}
+.padding-all-xl {
+  padding: var(--space-xl);
+}
+
+/*====== Right ======*/
+.padding-right-xs {
+  padding-right: var(--space-xs);
+}
+.padding-right-s {
+  padding-right: var(--space-s);
+}
+.padding-right-m {
+  padding-right: var(--space-m);
+}
+.padding-right-l {
+  padding-right: var(--space-l);
+}
+.padding-right-xl {
+  padding-right: var(--space-xl);
+}
+
+/*====== Left ======*/
+.padding-left-xs {
+  padding-left: var(--space-xs);
+}
+.padding-left-s {
+  padding-left: var(--space-s);
+}
+.padding-left-m {
+  padding-left: var(--space-m);
+}
+.padding-left-l {
+  padding-left: var(--space-l);
+}
+.padding-left-xl {
+  padding-left: var(--space-xl);
+}
+
+/*====== Top ======*/
+.padding-top-xs {
+  padding-top: var(--space-xs);
+}
+.padding-top-s {
+  padding-top: var(--space-s);
+}
+.padding-top-m {
+  padding-top: var(--space-m);
+}
+.padding-top-l {
+  padding-top: var(--space-l);
+}
+.padding-top-xl {
+  padding-top: var(--space-xl);
+}
+
+/*====== Bottom ======*/
+.padding-bottom-xs {
+  padding-bottom: var(--space-xs);
+}
+.padding-bottom-s {
+  padding-bottom: var(--space-s);
+}
+.padding-bottom-m {
+  padding-bottom: var(--space-m);
+}
+.padding-bottom-l {
+  padding-bottom: var(--space-l);
+}
+.padding-bottom-xl {
+  padding-bottom: var(--space-xl);
+}
+
 /*====== Icon specific overrides ======*/
 
 #header .fa-solid.fa-spin {
