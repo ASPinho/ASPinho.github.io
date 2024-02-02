@@ -12,6 +12,9 @@
 	--font-l: 20px;
 	--font-xl: 22px;
 	--font-heading4: 24px; 
+	--font-heading3: 28px; 
+	--font-heading2 32px; 
+	--font-heading1: 36px; 
 
 	--space-xs: 5px;
 	--space-s: 10px;
@@ -54,7 +57,8 @@ body {
 	padding: var(--space-s) var(--space-m);
 	display: flex;
 	justify-content: space-between;
-	font-size: var(--font-heading4);
+	font-size: var(--font-xl);
+	margin-bottom: var(--space-m);
 }
 
 #content {
