@@ -13,7 +13,7 @@
 	--font-xl: 22px;
 	--font-heading4: 24px; 
 	--font-heading3: 28px; 
-	--font-heading2 32px; 
+	--font-heading2: 32px; 
 	--font-heading1: 36px; 
 
 	--space-xs: 5px;
@@ -187,6 +187,18 @@ body {
   padding-bottom: var(--space-xl);
 }
 
+/*====== Font Sizes ======*/
+
+.font-size-xs { font-size: var(--font-xs); }
+.font-size-s { font-size: var(--font-s); }
+.font-size-m { font-size: var(--font-m); }
+.font-size-l { font-size: var(--font-l); }
+.font-size-xl { font-size: var(--font-xl); }
+.font-size-heading4 { font-size: var(--font-heading4); }
+.font-size-heading3 { font-size: var(--font-heading3); }
+.font-size-heading2 { font-size: var(--font-heading2); }
+.font-size-heading1 { font-size: var(--font-heading1); }
+
 /*====== Icon specific overrides ======*/
 
 #header .fa-solid.fa-spin {
@@ -205,3 +217,17 @@ body {
 	align-items: center;
 }
 
+.ph:empty {
+	display: none;
+}
+
+/*====== Display rules ======*/
+
+.content-title {
+	font-size: var(--font-size-heading2);
+	margin-bottom: var(--space-s);
+}
+
+.content-subtitle {
+	margin-bottom: var(--space-l);
+}
