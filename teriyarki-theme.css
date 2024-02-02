@@ -22,6 +22,11 @@
 	--space-l: 20px;
 	--space-xl: 25px;
 	
+	--gray-light: #E4E4E4;
+	--gray: #CDCFCC;
+	--gray-mid: #9A9C99;
+	--gray-dark: #5D5E60;
+	
 }
 
 html {
@@ -64,6 +69,8 @@ body {
 #content {
 	padding: 0 var(--space-m);
 }
+
+
 
 /*====== Margins ======*/
 /*=== All Sides ===*/
@@ -224,10 +231,11 @@ body {
 /*====== Display rules ======*/
 
 .content-title {
-	font-size: var(--font-heading2);
+	font-size: var(--font-heading1);
 	margin-bottom: var(--space-s);
 }
 
 .content-subtitle {
 	margin-bottom: var(--space-l);
+	color: var(--gray);
 }
