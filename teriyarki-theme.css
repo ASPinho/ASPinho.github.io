@@ -195,7 +195,8 @@ p {
 
 .content-title {
 	font-size: var(--font-heading1);
-	margin-bottom: var(--space-s);
+    margin-bottom: var(--space-xs);
+    font-weight: 600;
 }
 
 .content-subtitle {
