@@ -60,3 +60,22 @@ body {
 #content {
 	
 }
+
+/*====== Icon specific overrides ======*/
+
+#header .fa-solid.fa-spin {
+	-webkit-animation-duration: var(--fa-animation-duration, 3s);
+    animation-duration: var(--fa-animation-duration, 3s);
+}
+
+/*====== Display rules ======*/
+
+.display-flex {
+	display: flex;
+}
+
+.vertical-align {
+	display: flex;
+	align-items: center;
+}
+
