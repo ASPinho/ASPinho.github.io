@@ -1,0 +1,16 @@
+:root {
+	
+	--main-color: #1A4C39;
+	
+	--font-xs: 12px;
+	--font-s: 14px;
+	--font-m: 16px;
+	--font-l: 18px;
+	
+}
+
+body {
+	background-color: var(--main-color);
+	color: white;
+	font-size: var(--font-m);
+}
