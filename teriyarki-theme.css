@@ -12,6 +12,12 @@
 	--font-l: 18px;
 	--font-xl: 20px;
 	--font-heading4: 24px; 
+
+	--space-xs: 5px;
+	--space-s: 10px;
+	--space-m: 15px;
+	--space-l: 20px;
+	--space-xl: 25px;
 	
 }
 
@@ -34,11 +40,21 @@ body {
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
+	flex-direction: row;
 }
 
 #main-content {
 	max-width: 1280px;
 	height: 100%;
-	background-color: rgba(227, 216, 183, 0.5);
 	flex: 1;
+	background-color: rgba(227, 216, 183, 0.4);
+}
+
+#header {
+	padding: var(--space-s) 0;
+}
+
+#content {
+	
+	height: 100%;
 }
