@@ -203,5 +203,8 @@ p {
 }
 
 .content-container {
-	
+	background-color: var(--gray-dark);
+	padding: var(--space-s);
+	border: solid var(--gray-mid) 2px;
+	border-radius: 10px;
 }
