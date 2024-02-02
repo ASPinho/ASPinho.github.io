@@ -224,7 +224,7 @@ body {
 /*====== Display rules ======*/
 
 .content-title {
-	font-size: var(--font-size-heading2);
+	font-size: var(--font-heading2);
 	margin-bottom: var(--space-s);
 }
 
