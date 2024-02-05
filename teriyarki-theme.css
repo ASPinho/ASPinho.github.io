@@ -188,6 +188,11 @@ p {
 	align-items: center;
 }
 
+.horizontal-align {
+	display: flex;
+	justify-content: center;
+}
+
 .ph:empty {
 	display: none;
 }
@@ -212,7 +217,7 @@ p {
 
 /*====== Artsy stuff ======*/
 
-.retro-console {
+.retro-table {
 	background-color: var(--gray);
 	padding: var(--space-s);
 	border: solid var(--gray-mid-dark) 1px;
@@ -224,4 +229,31 @@ p {
 		 0px -1px 1px var(--gray-mid-dark),
 		1px 0px 1px var(--gray-mid-dark),
 		-1px 0px 1px var(--gray-mid-dark);
+	align-self: center;
+}
+
+.retro-table .table-header,
+.retro-table .table-row {
+	display: flex;
+}
+
+.retro-table .table-header {
+	border-bottom: dashed 2px var(--gray-light);
+}
+
+.retro-table .table-rows {
+	margin-top: var(--space-s);
+}
+
+
+.retro-table .table-header > div {
+	height: 32px;
+	display: flex;
+	align-items: center;
+}
+
+.retro-table .table-header > div:not(:last-of-type) {
+	border-right: dashed 2px var(--gray-light);
+	margin-right: var(--space-s);
+	padding-right: var(--space-s);
 }
