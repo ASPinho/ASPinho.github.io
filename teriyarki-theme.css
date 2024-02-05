@@ -7,9 +7,9 @@
 	--beige: #ECE7CA;
 	
 	--gray-light: #E4E4E4;
-	--gray: #CDCFCC;
-	--gray-mid: #9A9C99;
-	--gray-mid-dark: #7B7D7A;
+	--gray: #91918F;
+	--gray-mid: #6E6E6B;
+	--gray-mid-dark: #5C5C5A;
 	--gray-dark: #5D5E60;
 	
 	--font-xs: 14px;
@@ -204,11 +204,19 @@ p {
 }
 
 .content-container {
-	background-color: var(--gray-dark);
+}
+
+/*====== Artsy stuff ======*/
+
+.retro-console {
+	background-color: var(--gray);
 	padding: var(--space-s);
-	border: solid var(--gray-mid) 1px;
-	border-radius: 10px;
-	box-shadow: inset 1px 1px 4px 1px var(--gray-mid-dark),
-		inset -1px -1px 4px 1px var(--gray-mid-dark);
+	border: solid var(--gray-mid-dark) 1px;
+	border-radius: 4px;
+	box-shadow: inset 0px 0px 2px 2px var(--gray-mid);
 	font-size: var(--font-s);
+	text-shadow: 0px 1px 1px var(--gray-mid-dark),
+		 0px -1px 1px var(--gray-mid-dark),
+		1px 0px 1px var(--gray-mid-dark),
+		-1px 0px 1px var(--gray-mid-dark);
 }
