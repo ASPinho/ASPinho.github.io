@@ -193,6 +193,16 @@ p {
 	justify-content: center;
 }
 
+.full-center-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex1 { flex: 1; }
+.flex2 { flex: 2; }
+.flex3 { flex: 3; }
+
 .ph:empty {
 	display: none;
 }
@@ -232,28 +242,36 @@ p {
 	align-self: center;
 }
 
-.retro-table .table-header,
-.retro-table .table-row {
-	display: flex;
+#player-symbol {
+	width: 300px;
 }
 
-.retro-table .table-header {
-	border-bottom: dashed 2px var(--gray-light);
-}
-
-.retro-table .table-rows {
-	margin-top: var(--space-s);
-}
-
-
-.retro-table .table-header > div {
+.retro-table tr{
 	height: 32px;
 	display: flex;
 	align-items: center;
 }
 
-.retro-table .table-header > div:not(:last-of-type) {
-	border-right: dashed 2px var(--gray-light);
-	margin-right: var(--space-s);
-	padding-right: var(--space-s);
+.retro-table th:not(:first-of-type),
+.retro-table td:not(:first-of-type){
+	border-left: dashed 2px var(--gray-light);
+}
+
+.retro-table tr:not(:first-of-type){
+	border-top: dashed 2px var(--gray-light);
+}
+
+.retro-table th,
+.retro-table td{
+	height: 100%;
+}
+
+.retro-table th.small,
+.retro-table td.small{
+	width: 20%;
+}
+
+.retro-table th.med,
+.retro-table td.med{
+	width: 25%;
 }
