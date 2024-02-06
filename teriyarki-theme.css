@@ -246,6 +246,10 @@ p {
 	width: 300px;
 }
 
+#card-symbol {
+	width: 300px;
+}
+
 .retro-table tr{
 	height: 32px;
 	display: flex;
