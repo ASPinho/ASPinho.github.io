@@ -24,11 +24,13 @@
 	--font-heading1: 36px; 
 
 	--space-2xs: 2px;
-	--space-xs: 5px;
-	--space-s: 10px;
-	--space-m: 15px;
+	--space-xs: 4px;
+	--space-s: 8px;
+	--space-m: 12px;
 	--space-l: 20px;
-	--space-xl: 25px;
+	--space-xl: 32px;
+
+	--table-base-width: 350px;
 	
 }
 
@@ -219,15 +221,9 @@ p {
 	margin-bottom: var(--space-l);
 }
 
-/*
-.content-container {
-	
-}
-*/
-
 /*====== Artsy stuff ======*/
 
-.retro-table {
+.retro-console {
 	background-color: var(--gray);
 	padding: var(--space-s);
 	border: solid var(--gray-mid-dark) 1px;
@@ -243,35 +239,40 @@ p {
 }
 
 #player-symbol,
-#card-symbol,
-#zombie-apocalypse { width: 450px; }
+#card-symbol { 
+	width: var(--table-base-width); 
+}
 
-.retro-table tr{
+#zombie-apocalypse { 
+	width: calc(2*var(--table-base-width) + var(--space-l) + 4*var(--space-xs));
+}
+
+.retro-console tr{
 	height: 32px;
 	display: flex;
 	align-items: center;
 }
 
-.retro-table th:not(:first-of-type),
-.retro-table td:not(:first-of-type){
+.retro-console th:not(:first-of-type),
+.retro-console td:not(:first-of-type){
 	border-left: dashed 2px var(--gray-light);
 }
 
-.retro-table tr:not(:first-of-type){
+.retro-console tr:not(:first-of-type){
 	border-top: dashed 2px var(--gray-light);
 }
 
-.retro-table th,
-.retro-table td{
+.retro-console th,
+.retro-console td{
 	height: 100%;
 }
 
-.retro-table th.small,
-.retro-table td.small{
+.retro-console th.small,
+.retro-console td.small{
 	width: 20%;
 }
 
-.retro-table th.med,
-.retro-table td.med{
+.retro-console th.med,
+.retro-console td.med{
 	width: 25%;
 }
