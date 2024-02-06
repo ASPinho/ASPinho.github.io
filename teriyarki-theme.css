@@ -242,13 +242,9 @@ p {
 	align-self: center;
 }
 
-#player-symbol {
-	width: 300px;
-}
-
-#card-symbol {
-	width: 300px;
-}
+#player-symbol,
+#card-symbol,
+#zombie-apocalypse { width: 450px; }
 
 .retro-table tr{
 	height: 32px;
