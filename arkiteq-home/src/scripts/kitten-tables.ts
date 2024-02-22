@@ -23,3 +23,22 @@ export function getCardsPerSymbol() : TableData {
         columnClasses: ["vertical-align flex1", "small full-center-flex", "med full-center-flex"]
     };
 }
+
+export function getZombieApocalypseCards() : TableData {
+    return {
+        id: "zombie-apocalypse",
+        headers: ["Zombie Apocalypse Players", "Draw Pile", "Cards to add"],
+        rows: [
+            ["2", "15", "7"],
+            ["3", "20", "11"],
+            ["4", "25", "1"],
+            ["5", "30", "13"],
+            ["6", "35", "25"],
+            ["7", "\"", "32"],
+            ["8", "\"", "39"],
+            ["9", "\"", "46"],
+            ["10", "\"", "53"],
+        ],
+        columnClasses: ["vertical-align flex1", "small full-center-flex", "med full-center-flex"]
+    };
+}
