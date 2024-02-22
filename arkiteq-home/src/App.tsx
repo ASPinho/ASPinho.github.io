@@ -1,11 +1,12 @@
 import React from 'react';
 import RetroConsole from "./components/retro-console";
-import playersPerSymbol from "./scripts/kitten-tables";
+import {getPlayersPerSymbol, getCardsPerSymbol} from "./scripts/kitten-tables";
 import Table from "./components/simple-table";
 
 function App() {
 
-  const playersSymbolData = playersPerSymbol();
+  const playersSymbolData = getPlayersPerSymbol();
+  const cardsSymbolData = getCardsPerSymbol();
 
   return (
         <div id="main-content">
@@ -30,33 +31,13 @@ function App() {
               <p>To play with your bitch ass friends</p>
             </div>
             <div className="content-container">
-              <div className="horizontal-align margin-bottom-l">
+              <div className="horizontal-align justify-content-space-between margin-bottom-l">
                 <RetroConsole>
                   <Table data={playersSymbolData}/>
                 </RetroConsole>
-                <div className="retro-console margin-left-l">
-                  <table id="card-symbol">
-                    <thead>
-                      <tr>
-                        <th className="vertical-align flex1"><p>Cards / Symbol</p></th>
-                        <th className="small full-center-flex"><p>Paw</p></th>
-                        <th className="med full-center-flex"><p>No Paw</p></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="vertical-align flex1"><p>Exploding</p></td>
-                        <td className="small full-center-flex"><p>24</p></td>
-                        <td className="med full-center-flex"><p>36</p></td>
-                      </tr>
-                      <tr>
-                        <td className="vertical-align flex1"><p>Zombie</p></td>
-                        <td className="small full-center-flex"><p>22</p></td>
-                        <td className="med full-center-flex"><p>30</p></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <RetroConsole>
+                  <Table data={cardsSymbolData}/>
+                </RetroConsole>
               </div>
               <div className="horizontal-align margin-bottom-l">
                 <div className="retro-console">

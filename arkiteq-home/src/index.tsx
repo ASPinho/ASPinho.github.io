@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/teriyarki-theme.scss';
+import './styles/flex-rules.scss'
 import App from './App';
 
 const root = ReactDOM.createRoot(

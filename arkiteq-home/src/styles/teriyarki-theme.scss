@@ -181,35 +181,9 @@ p {
 
 /*====== Display rules ======*/
 
-.display-flex {
-  display: flex;
-}
-
-.vertical-align {
-  display: flex;
-  align-items: center;
-}
-
-.horizontal-align {
-  display: flex;
-  justify-content: center;
-}
-
-.full-center-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flex1 { flex: 1; }
-.flex2 { flex: 2; }
-.flex3 { flex: 3; }
-
 .ph:empty {
   display: none;
 }
-
-/*====== Display rules ======*/
 
 .content-title {
   font-size: var(--font-heading1);

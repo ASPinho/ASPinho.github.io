@@ -1,6 +1,6 @@
 import {TableData} from "./interfaces";
 
-function playersPerSymbol() : TableData {
+export function getPlayersPerSymbol() : TableData {
     return {
         id: "player-symbol",
         headers: ["Max Players / Symbol", "Paw", "No Paw"],
@@ -12,4 +12,14 @@ function playersPerSymbol() : TableData {
     };
 }
 
-export default playersPerSymbol
+export function getCardsPerSymbol() : TableData {
+    return {
+        id: "card-symbol",
+        headers: ["Cards / Symbol", "Paw", "No Paw"],
+        rows: [
+            ["Zombie", "22", "30"],
+            ["Exploding", "24", "36"],
+        ],
+        columnClasses: ["vertical-align flex1", "small full-center-flex", "med full-center-flex"]
+    };
+}
