@@ -32,31 +32,8 @@ function App() {
             <div className="content-container">
               <div className="horizontal-align margin-bottom-l">
                 <RetroConsole>
-                  <Table data={playersSymbolData} id="player-symbol"/>
+                  <Table data={playersSymbolData}/>
                 </RetroConsole>
-                <div className="retro-console">
-                  <table id="player-symbol">
-                    <thead>
-                    <tr>
-                      <th className="vertical-align flex1"><p>Max Players / Symbol</p></th>
-                      <th className="small full-center-flex"><p>Paw</p></th>
-                      <th className="med full-center-flex"><p>No Paw</p></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                      <td className="vertical-align flex1"><p>Zombie</p></td>
-                      <td className="small full-center-flex"><p>2</p></td>
-                      <td className="med full-center-flex"><p>3</p></td>
-                    </tr>
-                    <tr>
-                      <td className="vertical-align flex1"><p>Exploding</p></td>
-                      <td className="small full-center-flex"><p>3</p></td>
-                      <td className="med full-center-flex"><p>7</p></td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
                 <div className="retro-console margin-left-l">
                   <table id="card-symbol">
                     <thead>

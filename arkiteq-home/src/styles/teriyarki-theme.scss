@@ -258,7 +258,7 @@ p {
   border-left: dashed 2px var(--gray-light);
 }
 
-.retro-console tr:not(:first-of-type){
+.retro-console tbody tr{
   border-top: dashed 2px var(--gray-light);
 }
 

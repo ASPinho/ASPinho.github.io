@@ -1,13 +1,15 @@
 import React from "react";
 import {TableProps} from "../scripts/interfaces";
 
-const Table: React.FC<TableProps> = ({ data, id }) => {
+const Table: React.FC<TableProps> = ({ data}) => {
     return (
-        <table id = {id}>
+        <table id = {data.id}>
             <thead>
             <tr>
                 {data.headers.map((header, index) => (
-                    <th key={index}>{header}</th>
+                    <th key={index} className={data.columnClasses?.[index]}>
+                        {header}
+                    </th>
                 ))}
             </tr>
             </thead>
@@ -15,7 +17,9 @@ const Table: React.FC<TableProps> = ({ data, id }) => {
             {data.rows.map((row, rowIndex) => (
                 <tr key={rowIndex}>
                     {row.map((cell, cellIndex) => (
-                        <td key={cellIndex}>{cell}</td>
+                        <td key={cellIndex} className={data.columnClasses?.[cellIndex]}>
+                            {cell}
+                        </td>
                     ))}
                 </tr>
             ))}
