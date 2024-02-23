@@ -7,11 +7,6 @@ import BaseLayout from "./components/base-layout";
 export default App;
 
 function App() {
-
-  const playersSymbolData = getPlayersPerSymbol();
-  const cardsSymbolData = getCardsPerSymbol();
-  const zombieApocalypseCards = getZombieApocalypseCards();
-
   return (
       <BaseLayout>
         <div id="header">
@@ -37,15 +32,15 @@ function App() {
           <div className="content-container">
             <div className="horizontal-align justify-content-space-between margin-bottom-l">
               <RetroConsole>
-                <Table data={playersSymbolData}/>
+                <Table data={getPlayersPerSymbol()}/>
               </RetroConsole>
               <RetroConsole>
-                <Table data={cardsSymbolData}/>
+                <Table data={getCardsPerSymbol()}/>
               </RetroConsole>
             </div>
             <div className="horizontal-align margin-bottom-l">
               <RetroConsole>
-                <Table data={zombieApocalypseCards}/>
+                <Table data={getZombieApocalypseCards()}/>
               </RetroConsole>
             </div>
           </div>
