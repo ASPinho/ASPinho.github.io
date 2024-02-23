@@ -4,9 +4,12 @@ import {getPlayersPerSymbol, getCardsPerSymbol, getZombieApocalypseCards} from "
 import Table from "./components/simple-table";
 import BaseLayout from "./components/base-layout";
 
+
 export default App;
 
 function App() {
+
+
   return (
       <BaseLayout>
         <div id="header">
