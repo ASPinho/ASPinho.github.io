@@ -5,7 +5,7 @@
 
   --main-color: #1A4C39;
 
-  --beige: #ECE7CA;
+  --beige: #F9EFDB;
 
   --gray-light: #E4E4E4;
   --gray: #91918F;
@@ -43,34 +43,35 @@ html, body, p {
   padding: 0;
   border: 0;
 }
-
 body {
   height: 100%;
-  background-color: var(--main-color);
-  color: white;
+  background-color: var(--beige);
+  color: var(--gray-dark);
+  letter-spacing: 1px;
   font-size: var(--font-m);
   font-family: 'PT Sans Narrow', sans-serif;
   overflow: hidden;
   display: flex;
-  justify-content: center;
   flex-direction: row;
+  justify-content: center;
 }
+
 
 p {
   line-height: 1;
-  letter-spacing: 1px;
 }
 
 #main-content {
   height: 100%;
+  width: 100%;
   flex: 1;
 }
 
 #header {
-  padding: var(--space-s) var(--space-m);
-  display: flex;
-  justify-content: space-between;
-  font-size: var(--font-xl);
+  padding: var(--space-s) 0;
+  text-align: center;
+  width: 100%;
+  font-size: var(--font-heading4);
   margin-bottom: var(--space-m);
   background-color: rgba(227, 216, 183, 0.3);
 }
@@ -171,13 +172,6 @@ p {
 .font-size-heading3 { font-size: var(--font-heading3); }
 .font-size-heading2 { font-size: var(--font-heading2); }
 .font-size-heading1 { font-size: var(--font-heading1); }
-
-/*====== Icon specific overrides ======*/
-
-#header .fa-solid.fa-spin {
-  -webkit-animation-duration: var(--fa-animation-duration, 4s);
-  animation-duration: var(--fa-animation-duration, 4s);
-}
 
 /*====== Display rules ======*/
 
