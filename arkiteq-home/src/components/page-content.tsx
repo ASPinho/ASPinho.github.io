@@ -3,7 +3,7 @@ import React from "react";
 export interface PageContentProps {
     title: string;
     subtitle?: string;
-    children: React.ReactNode
+    children?: React.ReactNode
 }
 
 const PageContent: React.FC<PageContentProps> = ({title, subtitle, children}) => {

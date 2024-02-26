@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {createBrowserRouter, createHashRouter, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import './styles/teriyarki-theme.css';
 import './styles/flex-rules.css'
 import App from './App';
 import ExplodingKittens from "./routes/exploding-kittens";
 
-const router = createHashRouter([
-    {
-        path: "/",
-        element: <App />
-    },
+const router = createBrowserRouter([
     {
         path: "EK",
         element: <ExplodingKittens />
+    },
+    {
+        path: "/",
+        element: <App />
     }
 ])
 

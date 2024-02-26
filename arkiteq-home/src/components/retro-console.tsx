@@ -1,13 +1,21 @@
 import React from 'react';
 
-type Children = {
-    children: React.ReactNode;
+type RetroConsoleProps = {
+    children?: React.ReactNode;
+    extraClasses?: string;
 }
 
-const RetroConsole = ({children}: Children) => {
+const RetroConsole = (retroConsoleProps : RetroConsoleProps) => {
+
+    let fullClasses = "retro-console"
+
+    if(retroConsoleProps.extraClasses !== undefined) {
+        fullClasses = fullClasses + " " + retroConsoleProps.extraClasses
+    }
+
     return (
-        <div className="retro-console">
-            {children}
+        <div className={fullClasses}>
+            {retroConsoleProps.children}
         </div>
     )
 }

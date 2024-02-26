@@ -10,19 +10,15 @@ function ExplodingKittens () {
         <>
         <PageHeader />
         <PageContent title="Setting up Kittens" subtitle="To play with your bitch ass friends">
-            <div className="horizontal-align justify-content-space-between margin-bottom-l">
-                <RetroConsole>
-                    <Table data={getPlayersPerSymbol()}/>
-                </RetroConsole>
-                <RetroConsole>
-                    <Table data={getCardsPerSymbol()}/>
-                </RetroConsole>
-            </div>
-            <div className="horizontal-align margin-bottom-l">
-                <RetroConsole>
-                    <Table data={getZombieApocalypseCards()}/>
-                </RetroConsole>
-            </div>
+            <RetroConsole extraClasses={"margin-bottom-l"}>
+                <Table data={getPlayersPerSymbol()}/>
+            </RetroConsole>
+            <RetroConsole extraClasses={"margin-bottom-l"}>
+                <Table data={getCardsPerSymbol()}/>
+            </RetroConsole>
+            <RetroConsole>
+                <Table data={getZombieApocalypseCards()}/>
+            </RetroConsole>
         </PageContent>
         </>
     );
