@@ -6,12 +6,22 @@
   --main-color: #1A4C39;
 
   --beige: #F9EFDB;
+  --beige-mid: #ECE7CA;
+  --beige-dark: #DACAA4;
+  --beige-darker: #D1BB91;
+  --beige-darkest: #C8AD7E;
 
-  --gray-light: #E4E4E4;
-  --gray: #91918F;
-  --gray-mid: #6E6E6B;
-  --gray-mid-dark: #5C5C5A;
-  --gray-dark: #5D5E60;
+  --gray: #E4E4E4;
+  --gray-mid: #CDCFCC;
+  --gray-dark: #B7B8B3;
+  --gray-darker: #9A9C99;
+  --gray-darkest: #5D5E60;
+
+  --main-green-0: #1A4C39;
+  --main-green-1: #1b842c;
+  --main-green-2: #3aab58;
+  --main-green-3: #4fc879;
+  --main-green-4: #A7E4BC;
 
   --font-xs: 14px;
   --font-s: 16px;
@@ -46,7 +56,7 @@ html, body, p {
 body {
   height: 100%;
   background-color: var(--beige);
-  color: var(--gray-dark);
+  color: var(--gray-darkest);
   letter-spacing: 1px;
   font-size: var(--font-m);
   font-family: 'PT Sans Narrow', sans-serif;
@@ -61,23 +71,21 @@ p {
   line-height: 1;
 }
 
-#main-content {
-  height: 100%;
+#root {
   width: 100%;
-  flex: 1;
 }
 
 #header {
   padding: var(--space-s) 0;
   text-align: center;
-  width: 100%;
   font-size: var(--font-heading4);
   margin-bottom: var(--space-m);
-  background-color: rgba(227, 216, 183, 0.3);
+  background-color: var(--beige-dark);
 }
 
 #content {
-  padding: 0 var(--space-m);
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 /*====== Margins ======*/
@@ -179,6 +187,10 @@ p {
   display: none;
 }
 
+.content-container {
+
+}
+
 .content-title {
   font-size: var(--font-heading1);
   margin-bottom: var(--space-xs);
@@ -192,18 +204,14 @@ p {
 /*====== Artsy stuff ======*/
 
 .retro-console {
-  background-color: var(--gray);
+  background-color: var(--main-green-0);
   padding: var(--space-s);
-  border: solid var(--gray-mid-dark) 1px;
+  border: solid var(--main-green-1) 4px;
   border-radius: 4px;
-  box-shadow: inset 0 0 2px 2px var(--gray-mid);
+  box-shadow: inset 0 0 6px var(--main-green-2);
   font-size: var(--font-s);
+  color: var(--main-green-4);
   font-family: 'Changa', sans-serif;
-  text-shadow: 0 1px 1px var(--gray-mid-dark),
-  0 -1px 1px var(--gray-mid-dark),
-  1px 0 1px var(--gray-mid-dark),
-  -1px 0 1px var(--gray-mid-dark);
-  align-self: center;
 }
 
 #player-symbol,
@@ -223,11 +231,11 @@ p {
 
 .retro-console th:not(:first-of-type),
 .retro-console td:not(:first-of-type){
-  border-left: dashed 2px var(--gray-light);
+  border-left: dashed 2px var(--main-green-4);
 }
 
 .retro-console tbody tr{
-  border-top: dashed 2px var(--gray-light);
+  border-top: dashed 2px var(--main-green-4);
 }
 
 .retro-console th,
