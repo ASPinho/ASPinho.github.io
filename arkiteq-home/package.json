@@ -1,7 +1,7 @@
 {
   "name": "arkiteq-home",
   "version": "0.1.0",
-  "homepage": "https://ASPinho.github.io",
+  "homepage": "https://arkiteq.dev",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
