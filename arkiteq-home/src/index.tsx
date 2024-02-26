@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter} from "react-router-dom";
-import './styles/teriyarki-theme.scss';
-import './styles/flex-rules.scss'
+import './styles/teriyarki-theme.css';
+import './styles/flex-rules.css'
 import App from './App';
 
 const root = ReactDOM.createRoot(
