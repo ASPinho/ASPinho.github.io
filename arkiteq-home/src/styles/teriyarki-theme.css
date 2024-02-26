@@ -206,9 +206,9 @@ p {
   font-size: var(--font-s);
   font-family: 'Changa', sans-serif;
   text-shadow: 0 1px 1px var(--gray-mid-dark),
-  0px -1px 1px var(--gray-mid-dark),
-  1px 0px 1px var(--gray-mid-dark),
-  -1px 0px 1px var(--gray-mid-dark);
+  0 -1px 1px var(--gray-mid-dark),
+  1px 0 1px var(--gray-mid-dark),
+  -1px 0 1px var(--gray-mid-dark);
   align-self: center;
 }
 
