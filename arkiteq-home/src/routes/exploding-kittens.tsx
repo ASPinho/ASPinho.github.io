@@ -10,10 +10,10 @@ function ExplodingKittens () {
         <>
         <PageHeader />
         <PageContent title="Setting up Kittens" subtitle="To play with your bitch ass friends">
-            <RetroConsole extraClasses={"margin-bottom-l"}>
+            <RetroConsole extraClasses={"margin-bottom-m"}>
                 <Table data={getPlayersPerSymbol()}/>
             </RetroConsole>
-            <RetroConsole extraClasses={"margin-bottom-l"}>
+            <RetroConsole extraClasses={"margin-bottom-m"}>
                 <Table data={getCardsPerSymbol()}/>
             </RetroConsole>
             <RetroConsole>

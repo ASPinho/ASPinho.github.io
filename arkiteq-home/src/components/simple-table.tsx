@@ -1,7 +1,10 @@
 import React from "react";
 import {TableProps} from "../scripts/interfaces";
 
-const Table: React.FC<TableProps> = ({ data}) => {
+const Table = (tableProps : TableProps) => {
+
+    let data = tableProps.data
+
     return (
         <table id = {data.id}>
             <thead>

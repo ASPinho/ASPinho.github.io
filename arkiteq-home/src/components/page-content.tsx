@@ -1,22 +1,22 @@
 import React from "react";
 
-export interface PageContentProps {
+type PageContentProps = {
     title: string;
     subtitle?: string;
     children?: React.ReactNode
 }
 
-const PageContent: React.FC<PageContentProps> = ({title, subtitle, children}) => {
+const PageContent = (pageContentProps : PageContentProps) => {
     return (
         <div id="content">
             <div className="content-title">
-                {title}
+                {pageContentProps.title}
             </div>
             <div className="content-subtitle ph">
-                {subtitle}
+                {pageContentProps.subtitle}
             </div>
             <div className="content-container">
-                {children}
+                {pageContentProps.children}
             </div>
         </div>
     )
