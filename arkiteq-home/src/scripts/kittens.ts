@@ -1,4 +1,4 @@
-import {TableData} from "./interfaces";
+import {Tab, TableData} from "./interfaces";
 
 export function getPlayersPerSymbol() : TableData {
     return {
@@ -41,4 +41,20 @@ export function getZombieApocalypseCards() : TableData {
         ],
         columnClasses: ["vertical-align flex1", "small full-center-flex", "med full-center-flex"]
     };
+}
+
+export function getKittensTabs() : Tab[] {
+
+    const tabLabels = ["Setup", "Card Interactions"]
+    const tabs : Tab[] = []
+
+    for (let i = 0; i < tabLabels.length; i++) {
+        const currTab: Tab = {
+            id: i + 1,
+            label: tabLabels[i]
+        }
+
+        tabs.push(currTab);
+    }
+    return tabs
 }

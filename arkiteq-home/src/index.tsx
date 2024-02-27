@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import './styles/teriyarki-theme.css';
 import './styles/flex-rules.css'
-import App from './App';
+import App from './routes/App';
 import ExplodingKittens from "./routes/exploding-kittens";
 
 const router = createBrowserRouter([
