@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap');
 
 :root {
 
@@ -59,7 +59,7 @@ body {
   height: 100%;
   background-color: var(--beige);
   color: var(--gray-darkest);
-  font-size: var(--font-s);
+  font-size: var(--font-m);
   font-family: 'Fira Sans', sans-serif;
   overflow: hidden;
   display: flex;
@@ -220,7 +220,7 @@ p {
 .page-title-tabs {
   display: flex;
   background-color: var(--faded-green);
-  border: solid 2px var(--beige-dark);
+  border: solid 4px var(--beige-dark);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -248,7 +248,6 @@ p {
   border: solid var(--main-green-1) 4px;
   border-radius: 8px;
   box-shadow: inset 0 0 6px var(--main-green-2);
-  font-size: 0.8em;
   letter-spacing: 1px;
   color: var(--main-green-4);
   font-family: 'Changa', sans-serif;
@@ -274,7 +273,6 @@ p {
 
 .retro-console th,
 .retro-console td{
-  height: 100%;
   padding: var(--space-s) var(--space-m);
   white-space: nowrap;
 }
