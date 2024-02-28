@@ -16,4 +16,11 @@ export interface Tab {
 
 export interface Tabs {
     tabs: Tab[];
+    activeTab: number;
+    setActiveTab: (id: number) => void;
+}
+
+export interface InteractionCardProp {
+    title: string;
+    description: string;
 }

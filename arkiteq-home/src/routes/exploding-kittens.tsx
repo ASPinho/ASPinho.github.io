@@ -1,27 +1,27 @@
-import React from "react";
-import RetroConsole from "../components/retro-console";
-import Table from "../components/simple-table";
-import {getCardsPerSymbol, getPlayersPerSymbol, getZombieApocalypseCards, getKittensTabs} from "../scripts/kittens";
+import React, {useState} from "react";
+import {getKittensTabs} from "../scripts/kittens";
 import PageTitleBar from "../components/page-title-bar";
 import DefaultLayout from "../components/layouts/default-layout";
 import PageTitleTabs from "../components/page-title-tabs";
+import EkSetup from "../components/ek-setup";
+import EkInteractions from "../components/ek-interactions";
 
 function ExplodingKittens () {
+
+    const [activeTitleTab, setActiveTitleTab] = useState( 1);
+
+    function changeActiveTab(id : number) {
+        setActiveTitleTab(id);
+    }
+
     return (
         <>
             <DefaultLayout>
                 <PageTitleBar title="Setting up Kittens" subtitle="To play with your bitch ass friends">
-                    <PageTitleTabs tabs={getKittensTabs()}/>
+                    <PageTitleTabs tabs={getKittensTabs()} activeTab={activeTitleTab} setActiveTab={changeActiveTab}/>
                 </PageTitleBar>
-                <RetroConsole extraClasses="margin-bottom-m">
-                    <Table data={getPlayersPerSymbol()}/>
-                </RetroConsole>
-                <RetroConsole extraClasses="margin-bottom-m">
-                    <Table data={getCardsPerSymbol()}/>
-                </RetroConsole>
-                <RetroConsole>
-                    <Table data={getZombieApocalypseCards()}/>
-                </RetroConsole>
+                {activeTitleTab === 1 && <EkSetup/>}
+                {activeTitleTab === 2 && <EkInteractions/>}
             </DefaultLayout>
         </>
     );
