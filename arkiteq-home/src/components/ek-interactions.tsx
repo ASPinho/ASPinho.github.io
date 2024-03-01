@@ -11,8 +11,8 @@ const EkInteractions = () => {
 
     for (let i = 0; i < interactions.length; i++) {
         cards.push(
-            <RetroConsole extraClasses={i < interactions.length -1 ? "margin-bottom-m" : undefined}>
-                <InteractionCard title={interactions[i].title} description={interactions[i].description }/>
+            <RetroConsole key={i+1} extraClasses={i < interactions.length -1 ? "margin-bottom-m" : undefined}>
+                <InteractionCard title={interactions[i].title} subsections={interactions[i].subsections }/>
             </RetroConsole>
         )
     }

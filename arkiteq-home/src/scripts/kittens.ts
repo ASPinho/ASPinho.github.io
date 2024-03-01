@@ -60,29 +60,52 @@ export function getKittensInteractions() {
     let interactions : InteractionCardProp[] = [
         {
             title: "Imploding Kitten",
-            description: "- Zombie Kittens: If you die from the Imploding Kitten and return to the game, the Imploding Kitten card will be placed back into the deck face up.\n" +
-                "- Streaking Kittens: The total number of Kittens (Imploding and Exploding) should be equal to the number of players.\n" +
-                "- 2 players: Play the game with 1 Exploding Kitten and the Imploding Kitten from the expansion deck."
+            subsections: [
+                {
+                    subtitle: "Zombie Kittens",
+                    description: "If you die from the Imploding Kitten and return to the game, the Imploding Kitten card will be placed back into the deck face up."
+                },
+                {
+                    subtitle: "Streaking Kittens",
+                    description: "The total number of Kittens (Imploding and Exploding) should be equal to the number of players."
+                },
+                {
+                    subtitle: "2 players",
+                    description: "Play the game with 1 Exploding Kitten and the Imploding Kitten from the expansion deck."
+                }
+            ]
         },
         {
             title: "Tower of Power",
-            description: "- Zombie Kittens: If a player has the Tower of Power and dies, they keep the Tower of Power. \nIf the player later becomes Living, the Tower of Power will take effect again."
+            subsections: [
+                {
+                    subtitle: "Zombie Kittens",
+                    description: "If a player has the Tower of Power and dies, they keep the Tower of Power. If the player later becomes Living, the Tower of Power will take effect again."
+                }
+            ]
         },
         {
             title: "Barking Kitten",
-            description: "- Play Barking Kitten face up, ask for other; if player has it, they give half their cards (rounding up), you return the same number, and both Barking Kittens are discarded.\n" +
-                "If no one has the other Barking Kitten, leave the card face up in front of you, making you the target.\n" +
-                "If you have both, combine and play them together, selecting a target.\n" +
-                "Barking Kittens can't be noped."
+            subsections: [
+                {
+                    subtitle: "Card Explanation",
+                    description: "Play Barking Kitten face up, ask for other; if player has it, they give half their cards (rounding up), you return the same number, and both Barking Kittens are discarded.\n" +
+                        "If no one has the other Barking Kitten, leave the card face up in front of you, making you the target.\n" +
+                        "If you have both, combine and play them together, selecting a target.\n" +
+                        "Barking Kittens can't be noped."
+                }
+            ]
         },
         {
             title: "Share the Future",
-            description: "- Zombie Kittens: If the next player is Dead, the three cards will still be shared with that Dead player."
-        },
-        {
-            title: "Curse of the Cat Butt",
-            description: "- Exploding Kitten: "
+            subsections: [
+                {
+                    subtitle: "Zombie Kittens",
+                    description: "If the next player is Dead, the three cards will still be shared with that Dead player."
+                }
+            ]
         }
+
     ]
 
     return interactions

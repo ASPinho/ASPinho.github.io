@@ -1,16 +1,16 @@
 import React, {useState} from "react";
-import {InteractionCardProp} from "../scripts/interfaces";
+import {InteractionCardProp, InteractionCardSubsection} from "../scripts/interfaces";
 
-const Interaction = (subtitle : string, description : string) => {
+const Interaction = (subsection : InteractionCardSubsection) => {
     return (
-        <>
-        <div className={"interaction-card-subtitle"}>
-            {subtitle}
+        <div className={"interaction-card-subsection"}>
+            <div className={"interaction-card-subtitle"}>
+                {subsection.subtitle}
+            </div>
+            <div className={"interaction-card-description"}>
+                {subsection.description}
+            </div>
         </div>
-        <div className={"interaction-card-description"}>
-            {description}
-        </div>
-        </>
     )
 }
 
@@ -22,7 +22,13 @@ const InteractionCard = (card: InteractionCardProp) => {
         setIsOpen(!isOpen)
     }
 
+    let subsections = [];
 
+    for (let i = 0; i < card.subsections.length; i++) {
+        subsections.push(
+            <Interaction key={i+1} subtitle={card.subsections[i].subtitle} description={card.subsections[i].description}/>
+        )
+    }
 
     return (
         <div className={`interaction-card ${isOpen ? 'is-open' : ''}`}>
@@ -31,11 +37,7 @@ const InteractionCard = (card: InteractionCardProp) => {
                 {card.title}
                 <div className={"interaction-card-icon"}/>
             </div>
-            {isOpen &&
-            <div className={"interaction-card-description"}>
-                {card.description}
-            </div>
-            }
+            {isOpen && subsections}
         </div>
     )
 }

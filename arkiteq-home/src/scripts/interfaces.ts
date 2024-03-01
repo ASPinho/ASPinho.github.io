@@ -20,7 +20,12 @@ export interface Tabs {
     setActiveTab: (id: number) => void;
 }
 
+export interface InteractionCardSubsection {
+    subtitle : string,
+    description: string
+}
+
 export interface InteractionCardProp {
     title: string;
-    description: string;
+    subsections: InteractionCardSubsection[];
 }

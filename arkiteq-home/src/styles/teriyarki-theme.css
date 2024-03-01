@@ -305,7 +305,6 @@ p {
   display: flex;
   justify-content: space-between;
   padding-bottom: var(--space-2xs);
-  border-bottom: dashed 2px var(--main-green-4);
 }
 
 .interaction-card-icon {
@@ -313,6 +312,20 @@ p {
   height: 24px;
   width: 24px;
   cursor: pointer;
+}
+
+.interaction-card-subsection {
+  padding: var(--space-xs) var(--space-m);
+  border: dashed 2px var(--main-green-4);
+}
+
+.interaction-card-subsection:not(:last-of-type) {
+  margin-bottom: var(--space-m);
+}
+
+.interaction-card-subtitle {
+  font-size: 1.05em;
+  font-weight: bold;
 }
 
 .interaction-card-description {
@@ -388,6 +401,10 @@ p {
     font-size: 1.2em;
   }
 
+  .page-title-tabs {
+    font-size: 1.2em;
+  }
+
   .retro-console {
     padding: var(--space-xs);
     font-size: 1em;
@@ -398,8 +415,8 @@ p {
     padding: var(--space-xs) var(--space-s);
   }
 
-  .page-title-tabs {
-    font-size: 1.2em;
+  .interaction-card {
+    padding: var(--space-xs) var(--space-s) var(--space-s);
   }
 }
 
