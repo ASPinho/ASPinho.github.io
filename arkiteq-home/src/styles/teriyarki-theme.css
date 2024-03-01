@@ -394,6 +394,7 @@ p {
 
   .content-actions {
     justify-content: center;
+    margin-top: var(--space-xs);
   }
 
   .content-subtitle,
