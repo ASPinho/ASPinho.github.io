@@ -13,9 +13,11 @@ const PageTitleBar = (pageTitleBarProps : PageTitleBarProps) => {
                 <div className="content-title">
                     {pageTitleBarProps.title}
                 </div>
+                {(pageTitleBarProps.subtitle !== undefined) &&
                 <div className="content-subtitle ph">
                     {pageTitleBarProps.subtitle}
                 </div>
+                }
             </div>
             <div className="content-actions ph">
                 {pageTitleBarProps.children}

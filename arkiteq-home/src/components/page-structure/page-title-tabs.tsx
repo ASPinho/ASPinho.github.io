@@ -1,5 +1,5 @@
 import React from "react";
-import {Tabs} from "../scripts/interfaces";
+import {Tabs} from "../../scripts/interfaces";
 
 const PageTitleTabs = (props : Tabs) => {
 

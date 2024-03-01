@@ -1,5 +1,5 @@
 import React from "react";
-import PageHeader from "../header";
+import PageHeader from "../page-structure/header";
 
 type DefaultLayoutProps = {
     children: React.ReactNode;
@@ -9,7 +9,7 @@ const DefaultLayout = (props : DefaultLayoutProps) => {
     return (
         <>
             <PageHeader/>
-            <div id="content">
+            <div id="main-content">
                 {props.children}
             </div>
         </>
