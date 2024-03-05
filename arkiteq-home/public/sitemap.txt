@@ -1,2 +1,3 @@
 https://arkiteq.dev/
-https://arkiteq.dev/?/EK
+https://arkiteq.dev/?/ek
+https://arkiteq.dev/?/game-selection

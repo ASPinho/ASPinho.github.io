@@ -5,11 +5,16 @@ import './styles/teriyarki-theme.css';
 import './styles/flex-rules.css'
 import App from './routes/App';
 import ExplodingKittens from "./routes/exploding-kittens";
+import GameSelection from "./routes/game-selection";
 
 const router = createBrowserRouter([
     {
-        path: "EK",
+        path: "ek",
         element: <ExplodingKittens />
+    },
+    {
+        path: "game-selection",
+        element: <GameSelection />
     },
     {
         path: "/",

@@ -29,3 +29,4 @@ export interface InteractionCardProp {
     title: string;
     subsections: InteractionCardSubsection[];
 }
+

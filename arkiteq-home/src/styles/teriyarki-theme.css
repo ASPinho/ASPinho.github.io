@@ -295,8 +295,6 @@ p {
 }
 
 .interaction-card {
-  padding: var(--space-xs) var(--space-s);
-  transition: height 2s ease-in;
 }
 
 .interaction-card-title {
@@ -415,10 +413,6 @@ p {
   .retro-console th,
   .retro-console td{
     padding: var(--space-xs) var(--space-s);
-  }
-
-  .interaction-card {
-    padding: var(--space-2xs) var(--space-xs) var(--space-xs);
   }
 }
 

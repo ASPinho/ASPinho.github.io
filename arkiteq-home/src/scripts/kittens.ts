@@ -57,7 +57,7 @@ export function getKittensTabs() : Tab[] {
 
 export function getKittensInteractions() {
 
-    let interactions : InteractionCardProp[] = [
+    const interactions : InteractionCardProp[] = [
         {
             title: "Imploding Kitten",
             subsections: [
