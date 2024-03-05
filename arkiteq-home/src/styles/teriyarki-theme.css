@@ -416,10 +416,6 @@ p {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
-  :root {
-    --big-border: solid var(--beige-dark) 8px;
-  }
-
   body {
     font-size: var(--font-xs);
   }

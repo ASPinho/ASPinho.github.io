@@ -27,7 +27,7 @@ export function getCardsPerSymbol() : TableData {
 export function getZombieApocalypseCards() : TableData {
     return {
         id: "zombie-apocalypse",
-        headers: ["Zombiepocalypse", "Deck Size", "Add"],
+        headers: ["Zombiepocalypse", "Deck", "Add"],
         rows: [
             ["6", "35", "25"],
             ["7", "\"", "32"],
