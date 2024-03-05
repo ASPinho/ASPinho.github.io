@@ -230,7 +230,6 @@ p {
 .page-title-tabs {
   display: flex;
   background-color: var(--faded-green);
-  border: solid 4px var(--beige-dark);
   border-radius: var(--app-border-radius);
   overflow: hidden;
 }
@@ -280,7 +279,7 @@ p {
 }
 
 .retro-console th {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 .retro-console th:not(:first-of-type),
@@ -304,7 +303,8 @@ p {
 
 .retro-console th.main-col,
 .retro-console td.main-col{
-  flex: 1 1 33%;
+  justify-content: left;
+  flex: 1 1 26%;
 }
 
 .interaction-card {
@@ -462,9 +462,17 @@ p {
     font-size: 1em;
   }
 
+  .retro-console th {
+    font-size: 1em;
+  }
+
   .retro-console th,
   .retro-console td{
     padding: var(--space-xs) var(--space-s);
+  }
+
+  .interaction-card {
+    padding: var(--space-xs);
   }
 }
 
