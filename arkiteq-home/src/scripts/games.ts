@@ -19,7 +19,7 @@ export function getGames() {
             route: "/ek"
         },
         {
-            title: "Dorfromantik",
+            title: "DorfRomantik",
             genres: ["Cooperative","City Building","Puzzle","Campaign"],
             averageDuration: 60,
             minPlayers: 1,

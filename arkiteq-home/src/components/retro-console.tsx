@@ -2,20 +2,20 @@ import React from 'react';
 
 type RetroConsoleProps = {
     children?: React.ReactNode;
-    extraClasses?: string;
+    isBorderless?: boolean;
 }
 
-const RetroConsole = (retroConsoleProps : RetroConsoleProps) => {
+const RetroConsole = (props : RetroConsoleProps) => {
 
     let fullClasses = "retro-console"
 
-    if(retroConsoleProps.extraClasses !== undefined) {
-        fullClasses = fullClasses + " " + retroConsoleProps.extraClasses
+    if(props.isBorderless) {
+        fullClasses = fullClasses + " borderless"
     }
 
     return (
         <div className={fullClasses}>
-            {retroConsoleProps.children}
+            {props.children}
         </div>
     )
 }

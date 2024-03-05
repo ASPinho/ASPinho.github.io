@@ -1,19 +1,17 @@
 import React from "react";
 
 export interface TheButtonProps {
-    id: number;
     label: string;
     onclick(): void;
 }
-function TheButton (props : TheButtonProps) {
+function GameCard (props : TheButtonProps) {
     return (
         <div
-            key={props.id}
-            className={"btn btn-primary btn-large"}
+            className={"game-card"}
             onClick={() => props.onclick()}>
             {props.label}
         </div>
     )
 }
 
-export default TheButton
+export default GameCard

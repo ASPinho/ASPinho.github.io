@@ -3,20 +3,13 @@ import DefaultLayout from "../components/layouts/default-layout";
 import PageTitleBar from "../components/page-structure/page-title-bar";
 import PageContent from "../components/page-structure/page-content";
 import {useNavigate} from "react-router-dom";
-import TheButton from "../components/the-button";
+import GameCard from "../components/game-card";
 import { getGames} from "../scripts/games";
 
 function GameSelection () {
 
     const games = getGames()
     const navigate = useNavigate()
-    const gameButtons = []
-
-    for (let i = 0; i < games.length; i++) {
-        gameButtons.push(
-            <TheButton id={i+1} label={games[i].title} onclick={() => navigate(games[i].route)}/>
-        )
-    }
 
     return (
         <>
@@ -24,7 +17,11 @@ function GameSelection () {
                 <PageTitleBar title="Select a game" subtitle="To play with your bitch ass friends">
                 </PageTitleBar>
                 <PageContent>
-                    {gameButtons}
+                    <div id={"game-selection"}>
+                        {games.map((game,index) => (
+                            <GameCard key={index+1} label={game.title} onclick={() => navigate(game.route)}/>
+                        ))}
+                    </div>
                 </PageContent>
             </DefaultLayout>
         </>

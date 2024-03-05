@@ -41,6 +41,7 @@
   --space-xl: 32px;
 
   --app-border-radius: 4px;
+  --big-border: solid var(--beige-dark) 16px;
 
 }
 
@@ -199,6 +200,10 @@ p {
 
 #page-content {
   overflow-y: auto;
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: var(--space-m);
+  column-gap: var(--space-m);
 }
 
 .content-actions {
@@ -250,23 +255,32 @@ p {
 .retro-console {
   background-color: var(--main-green-0);
   padding: var(--space-m);
-  border: solid var(--main-green-1) 4px;
+  border: var(--big-border);
   border-radius: var(--app-border-radius);
-  box-shadow: inset 0 0 24px var(--main-green-2);
+  box-shadow: inset 0 0 12px var(--main-green-2);
   letter-spacing: 1px;
   font-size: 0.8em;
   color: var(--main-green-4);
   font-family: 'Changa', sans-serif;
+  flex: 1 1 50%;
+}
 
+.retro-console.borderless {
+  border: solid var(--main-green-1) 4px;
 }
 
 .retro-console table {
   width: 100%;
+  max-width: 100%;
 }
 
 .retro-console tr{
   display: flex;
   align-items: center;
+}
+
+.retro-console th {
+  font-size: 1.1em;
 }
 
 .retro-console th:not(:first-of-type),
@@ -282,16 +296,15 @@ p {
 .retro-console td{
   padding: var(--space-s) var(--space-m);
   white-space: nowrap;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.retro-console th.small,
-.retro-console td.small{
-  width: 20%;
-}
-
-.retro-console th.med,
-.retro-console td.med{
-  width: 25%;
+.retro-console th.main-col,
+.retro-console td.main-col{
+  flex: 1 1 33%;
 }
 
 .interaction-card {
@@ -360,10 +373,52 @@ p {
   transform: translate(-50%, -50%) rotate(-90deg);
 }
 
+.game-card {
+  position: relative;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: var(--main-green-0);
+  border: var(--big-border);
+  color: var(--beige);
+  border-radius: var(--app-border-radius);
+  padding: var(--space-l) var(--space-xl);
+  text-align: center;
+  transition: transform 0.2s linear;
+}
+
+.game-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 10px 5px var(--main-green-1);
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.game-card:active {
+  transform: scale(0.96);
+}
+
+.game-card:active::after {
+  opacity: 1;
+}
+
+#game-selection .game-card {
+  flex: 1 1 20%;
+}
+
 /*====== Device Breakpoints ======*/
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+
+  :root {
+    --big-border: solid var(--beige-dark) 8px;
+  }
 
   body {
     font-size: var(--font-xs);
@@ -378,10 +433,7 @@ p {
     margin-bottom: var(--space-m);
   }
 
-  .page-title-tabs {
-    flex: 1;
-  }
-
+  .page-title-tabs,
   .page-title-tab {
     flex: 1;
   }

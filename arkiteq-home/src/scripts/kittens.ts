@@ -8,7 +8,7 @@ export function getPlayersPerSymbol() : TableData {
             ["Zombie", "2", "3"],
             ["Exploding", "3", "7"],
         ],
-        columnClasses: ["vertical-align flex1", "small full-center-flex", "med full-center-flex"]
+        columnClasses: ["main-col", "", ""]
     };
 }
 
@@ -20,7 +20,7 @@ export function getCardsPerSymbol() : TableData {
             ["Zombie", "22", "30"],
             ["Exploding", "24", "36"],
         ],
-        columnClasses: ["vertical-align flex1", "small full-center-flex", "med full-center-flex"]
+        columnClasses: ["main-col", "", ""]
     };
 }
 
@@ -35,7 +35,7 @@ export function getZombieApocalypseCards() : TableData {
             ["9", "\"", "46"],
             ["10", "\"", "53"]
         ],
-        columnClasses: ["vertical-align flex1", "small full-center-flex", "med full-center-flex"]
+        columnClasses: ["main-col", "", ""]
     };
 }
 
