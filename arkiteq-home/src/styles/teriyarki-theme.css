@@ -60,7 +60,7 @@ body {
   background-color: var(--beige);
   color: var(--gray-darkest);
   font-size: var(--font-m);
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Changa', sans-serif;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -220,7 +220,8 @@ p {
 
 .content-title {
   font-size: 2em;
-  font-weight: 600;
+  font-weight: bold;
+  line-height: 1;
 }
 
 .content-subtitle {
@@ -242,6 +243,7 @@ p {
   cursor: pointer;
   padding: var(--space-m) var(--space-l);
   text-align: center;
+  font-weight: bold;
 }
 
 .page-title-tab.active {
@@ -260,7 +262,6 @@ p {
   letter-spacing: 1px;
   font-size: 0.8em;
   color: var(--main-green-4);
-  font-family: 'Changa', sans-serif;
   flex: 1 1 50%;
 }
 
@@ -374,42 +375,30 @@ p {
   transform: translate(-50%, -50%) rotate(-90deg);
 }
 
+
 .game-card {
   position: relative;
   font-size: 1.2em;
   letter-spacing: 1px;
+  text-align: center;
   cursor: pointer;
   background-color: var(--main-green-0);
-  border: var(--big-border);
   color: var(--beige);
   border-radius: var(--app-border-radius);
   padding: var(--space-l) var(--space-xl);
-  text-align: center;
-  transition: transform 0.2s linear;
+  flex: 1 1 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: transform, background-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
 }
 
-.game-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: inset 0 0 10px 5px var(--main-green-1);
-  opacity: 0;
-  transition: opacity 0.2s linear;
-}
-
-.game-card:active {
+.game-card:hover {
+  background-color: var(--beige-dark);
+  color: var(--main-green-0);
   transform: scale(0.96);
-}
-
-.game-card:active::after {
-  opacity: 1;
-}
-
-#game-selection .game-card {
-  flex: 1 1 20%;
 }
 
 /*====== Device Breakpoints ======*/
@@ -477,6 +466,10 @@ p {
 
   .interaction-card {
     padding: var(--space-xs);
+  }
+
+  .game-card {
+    font-size: 1.4em;
   }
 }
 

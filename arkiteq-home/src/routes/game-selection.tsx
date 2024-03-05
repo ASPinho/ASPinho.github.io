@@ -14,14 +14,12 @@ function GameSelection () {
     return (
         <>
             <DefaultLayout>
-                <PageTitleBar title="Select a game" subtitle="To play with your bitch ass friends">
+                <PageTitleBar title="Pick a game" subtitle="To play with your bitch ass friends">
                 </PageTitleBar>
                 <PageContent>
-                    <div id={"game-selection"}>
-                        {games.map((game,index) => (
-                            <GameCard key={index+1} label={game.title} onclick={() => navigate(game.route)}/>
-                        ))}
-                    </div>
+                    {games.map((game,index) => (
+                        <GameCard key={index+1} label={game.title} onclick={() => navigate(game.route)}/>
+                    ))}
                 </PageContent>
             </DefaultLayout>
         </>
