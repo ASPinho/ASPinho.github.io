@@ -347,13 +347,13 @@ p {
   justify-content: space-between;
   align-items: center;
   padding-bottom: var(--size-2xs);
+  cursor: pointer;
 }
 
 .interaction-card-icon {
   position: relative;
   height: 24px;
   width: 24px;
-  cursor: pointer;
 }
 
 .interaction-card-subsection {
