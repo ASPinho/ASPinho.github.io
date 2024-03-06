@@ -411,6 +411,8 @@ p {
   letter-spacing: 1px;
   text-align: center;
   cursor: pointer;
+  border-left: solid var(--size-s) var(--main-green-4);
+  border-bottom: solid var(--size-s) var(--main-green-4);
   border-radius: var(--app-border-radius);
   padding: var(--size-l) var(--size-xl);
   flex: 1 1 20%;
@@ -429,7 +431,6 @@ p {
   color: var(--main-green-9);
 }
 
-.game-card::before,
 .game-card::after {
   content: '';
   position: absolute;
@@ -437,15 +438,7 @@ p {
   left: 0;
   background-color: var(--main-green-4);
   z-index: 5;
-}
-
-.game-card::before {
-  width: 100%;
-  height: var(--size-s);
-}
-
-.game-card::after {
-  width: var(--size-s);
+  width: 0;
   height: 100%;
   transition: width 0.25s;
 }
