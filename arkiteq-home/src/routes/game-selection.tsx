@@ -17,9 +17,11 @@ function GameSelection () {
                 <PageTitleBar title="Pick a game" subtitle="To play with your bitch ass friends">
                 </PageTitleBar>
                 <PageContent>
-                    {games.map((game,index) => (
-                        <GameCard key={index+1} label={game.title} onclick={() => navigate(game.route)}/>
-                    ))}
+                    <div className={"display-flex flex-row-wrap row-gap-m column-gap-m"}>
+                        {games.map((game,index) => (
+                            <GameCard key={index+1} label={game.title} onclick={() => navigate(game.route)}/>
+                        ))}
+                    </div>
                 </PageContent>
             </DefaultLayout>
         </>

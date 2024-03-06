@@ -113,7 +113,15 @@
   -ms-flex-align: end;
 }
 
-
 .flex1 { flex: 1; }
 .flex2 { flex: 2; }
 .flex3 { flex: 3; }
+
+/*====== Flex Flows ======*/
+/*=== Row ===*/
+.flex-row { flex-direction: row; }
+.flex-row-wrap { flex-flow: row wrap; }
+
+/*=== Column ===*/
+.flex-column { flex-direction: column; }
+.flex-column-wrap { flex-flow: column wrap; }

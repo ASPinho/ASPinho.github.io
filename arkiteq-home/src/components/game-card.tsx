@@ -9,7 +9,9 @@ function GameCard (props : TheButtonProps) {
         <div
             className={"game-card"}
             onClick={() => props.onclick()}>
-            {props.label}
+            <span>
+                {props.label}
+            </span>
         </div>
     )
 }

@@ -22,8 +22,10 @@ function ExplodingKittens () {
                     <PageTitleTabs tabs={getKittensTabs()} activeTab={activeTitleTab} setActiveTab={changeActiveTab}/>
                 </PageTitleBar>
                 <PageContent>
-                    {activeTitleTab === 2 && <EkInteractions/>}
-                    {activeTitleTab === 1 && <EkSetup/>}
+                    <div className={"display-flex flex-column-wrap row-gap-m"}>
+                        {activeTitleTab === 2 && <EkInteractions/>}
+                        {activeTitleTab === 1 && <EkSetup/>}
+                    </div>
                 </PageContent>
             </DefaultLayout>
         </>
