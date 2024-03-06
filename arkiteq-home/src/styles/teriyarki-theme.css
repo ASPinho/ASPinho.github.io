@@ -275,8 +275,8 @@ p {
 }
 
 .page-title-tab.active {
-  background-color: var(--main-green-0);
-  color: var(--beige-0);
+  background-color: var(--main-green-9);
+  color: var(--main-green-4);
 }
 
 /*====== Artsy stuff ======*/
@@ -427,7 +427,7 @@ p {
   z-index: 10;
 }
 
-.game-card:hover span{
+.game-card:hover span {
   color: var(--main-green-9);
 }
 
