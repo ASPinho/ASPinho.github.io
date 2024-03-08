@@ -258,25 +258,35 @@ p {
 
 .page-title-tabs {
   display: flex;
-  background-color: var(--faded-green);
+  background-color: var(--main-green-9);
+  color: var(--main-green-4);
+  border: solid var(--size-xs) var(--main-green-4);
   border-radius: var(--app-border-radius);
   overflow: hidden;
 }
 
 .page-title-tab {
-  color: var(--main-green-9);
-  transition-property: color, background-color;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in;
+  position: relative;
   cursor: pointer;
   padding: var(--size-m) var(--size-l);
   text-align: center;
   font-weight: bold;
 }
 
-.page-title-tab.active {
-  background-color: var(--main-green-9);
-  color: var(--main-green-4);
+.page-title-tab::after {
+  content: '';
+  position: absolute;
+  bottom: var(--size-s);
+  left: 50%;
+  transform: translateX(-50%);
+  height: var(--size-xs);
+  width: 0;
+  background-color: var(--main-green-4);
+  transition: width 0.2s ease-out;
+}
+
+.page-title-tab.active::after {
+  width: calc(100% - 2 * var(--size-l));
 }
 
 /*====== Artsy stuff ======*/

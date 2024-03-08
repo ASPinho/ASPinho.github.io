@@ -16,7 +16,7 @@ export function getGames() {
             averageDuration: 15,
             minPlayers: 2,
             maxPlayers: 10,
-            route: "/ek"
+            route: "ek"
         },
         {
             title: "DorfRomantik",
@@ -24,7 +24,7 @@ export function getGames() {
             averageDuration: 60,
             minPlayers: 1,
             maxPlayers: 6,
-            route: "/romantik"
+            route: "romantik"
         },
         {
             title: "Ticket to Ride: Europe",
@@ -32,7 +32,7 @@ export function getGames() {
             averageDuration: 60,
             minPlayers: 2,
             maxPlayers: 5,
-            route: "/ttr-europe"
+            route: "ttr-europe"
         }
     ]
 

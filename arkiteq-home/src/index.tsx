@@ -9,11 +9,11 @@ import GameSelection from "./routes/game-selection";
 
 const router = createBrowserRouter([
     {
-        path: "ek",
+        path: "game-picker/ek",
         element: <ExplodingKittens />
     },
     {
-        path: "game-selection",
+        path: "game-picker",
         element: <GameSelection />
     },
     {
