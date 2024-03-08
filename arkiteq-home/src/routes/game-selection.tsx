@@ -14,8 +14,7 @@ function GameSelection () {
     return (
         <>
             <DefaultLayout>
-                <PageTitleBar title="Pick a game" subtitle="To play with your bitch ass friends">
-                </PageTitleBar>
+                <PageTitleBar title="Pick a game" subtitle="To play with your bitch ass friends"/>
                 <PageContent>
                     <div className={"display-flex flex-row-wrap row-gap-m column-gap-m"}>
                         {games.map((game,index) => (

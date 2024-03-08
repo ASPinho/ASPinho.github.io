@@ -289,6 +289,55 @@ p {
   width: calc(100% - 2 * var(--size-l));
 }
 
+.back-button {
+  position: relative;
+  background-color: var(--main-green-9);
+  color: var(--main-green-4);
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  margin-right: var(--size-m);
+  padding: var(--size-2xs) var(--size-m) var(--size-2xs) var(--size-s);
+  border-top: solid var(--size-xs) var(--main-green-4);
+  line-height: 1;
+}
+
+.back-button span {
+  z-index: 10;
+  transition: color 0.2s ease-in;
+}
+
+.back-button::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: var(--size-xs);
+  right: 0;
+  background-color: var(--main-green-4);
+  transition: width 0.2s ease-in;
+}
+
+.back-button:hover::after {
+  width: 100%;
+}
+
+.back-button:hover span {
+  color: var(--main-green-9);
+}
+
+.back-button svg {
+  z-index: 10;
+  fill: var(--main-green-4);
+  transition: fill 0.2s ease-in;
+}
+
+.back-button:hover svg {
+  fill: var(--main-green-9);
+}
+
 /*====== Artsy stuff ======*/
 
 .retro-console {
@@ -412,7 +461,6 @@ p {
 .interaction-card.is-open .interaction-card-icon::after {
   transform: translate(-50%, -50%) rotate(-90deg);
 }
-
 
 .game-card {
   position: relative;

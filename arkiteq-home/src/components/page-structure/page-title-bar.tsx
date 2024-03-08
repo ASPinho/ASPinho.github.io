@@ -1,26 +1,32 @@
 import React from "react";
+import BackButton from "./back-button";
 
 type PageTitleBarProps = {
     title: string;
     subtitle?: string;
+    showBackButton?: boolean;
     children?: React.ReactNode;
 }
 
-const PageTitleBar = (pageTitleBarProps : PageTitleBarProps) => {
+const PageTitleBar = (props : PageTitleBarProps) => {
     return (
         <div id="content-title-bar">
             <div>
-                <div className="content-title">
-                    {pageTitleBarProps.title}
+                <div className={"vertical-align"}>
+                    {props.showBackButton && <BackButton/>}
+                    <div className="content-title">
+                        {props.title}
+                    </div>
                 </div>
-                {(pageTitleBarProps.subtitle !== undefined) &&
-                <div className="content-subtitle ph">
-                    {pageTitleBarProps.subtitle}
+
+                {(props.subtitle !== undefined) &&
+                <div className="content-subtitle">
+                    {props.subtitle}
                 </div>
                 }
             </div>
             <div className="content-actions ph">
-                {pageTitleBarProps.children}
+                {props.children}
             </div>
         </div>
     )

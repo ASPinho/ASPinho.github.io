@@ -18,7 +18,7 @@ function ExplodingKittens () {
     return (
         <>
             <DefaultLayout>
-                <PageTitleBar title="Setting up Kittens" subtitle="To play with your bitch ass friends">
+                <PageTitleBar title="Setting up Kittens" subtitle="To play with your bitch ass friends" showBackButton={true}>
                     <PageTitleTabs tabs={getKittensTabs()} activeTab={activeTitleTab} setActiveTab={changeActiveTab}/>
                 </PageTitleBar>
                 <PageContent>
