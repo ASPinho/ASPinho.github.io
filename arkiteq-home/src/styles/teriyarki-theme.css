@@ -43,9 +43,8 @@
   --size-l: 20px;
   --size-xl: 32px;
 
-  --app-border-radius: 0;
-  --big-border: solid var(--beige-dark) 16px;
-
+  --app-border-radius: 32px;
+  --default-max-width: 1280px;
 }
 
 html {
@@ -202,19 +201,32 @@ p {
 /*====== Display rules ======*/
 
 #header {
-  padding: var(--size-s) 0;
+  position: fixed;
+  top: var(--size-m);
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   font-size: 1.2em;
   letter-spacing: 1px;
-  font-weight: bold;
-  margin-bottom: var(--size-m);
-  background-color: var(--beige-dark);
+  width: var(--default-max-width);
+}
+
+#header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#the-title {
+  position: absolute;
+  left: var(--size-xl);
+  font-size: 1.1em;
 }
 
 #main-content {
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: var(--default-max-width);
+  margin: 90px auto 0;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -232,6 +244,7 @@ p {
 #page-content {
   overflow-y: auto;
   flex: 1;
+
 }
 
 .content-actions {
@@ -268,7 +281,7 @@ p {
 .page-title-tab {
   position: relative;
   cursor: pointer;
-  padding: var(--size-m) var(--size-l);
+  padding: var(--size-s) var(--size-l);
   text-align: center;
   font-weight: bold;
 }
@@ -279,7 +292,7 @@ p {
   bottom: var(--size-s);
   left: 50%;
   transform: translateX(-50%);
-  height: var(--size-xs);
+  height: var(--size-2xs);
   width: 0;
   background-color: var(--main-green-4);
   transition: width 0.2s ease-out;
@@ -289,53 +302,33 @@ p {
   width: calc(100% - 2 * var(--size-l));
 }
 
-.back-button {
+.back-chevron {
   position: relative;
-  background-color: var(--main-green-9);
-  color: var(--main-green-4);
-  font-size: 0.8em;
-  letter-spacing: 1px;
+  height: 24px;
+  width: 24px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  height: fit-content;
-  margin-right: var(--size-m);
-  padding: var(--size-2xs) var(--size-m) var(--size-2xs) var(--size-s);
-  border-top: solid var(--size-xs) var(--main-green-4);
-  line-height: 1;
 }
 
-.back-button span {
-  z-index: 10;
-  transition: color 0.2s ease-in;
-}
-
-.back-button::after {
+.back-chevron::before,
+.back-chevron::after {
   content: '';
   position: absolute;
-  height: 100%;
-  width: var(--size-xs);
-  right: 0;
+  left: 25%;
+  height: 40%;
+  width: var(--size-2xs);
   background-color: var(--main-green-4);
-  transition: width 0.2s ease-in;
 }
 
-.back-button:hover::after {
-  width: 100%;
+.back-chevron::before {
+  top: 25%;
+  transform: translate(-25%, calc(-25% + 0.5px));
+  rotate: 45deg;
 }
 
-.back-button:hover span {
-  color: var(--main-green-9);
-}
-
-.back-button svg {
-  z-index: 10;
-  fill: var(--main-green-4);
-  transition: fill 0.2s ease-in;
-}
-
-.back-button:hover svg {
-  fill: var(--main-green-9);
+.back-chevron::after {
+  bottom: 25%;
+  transform: translate(-25%, calc(25% - 0.5px));
+  rotate: -45deg;
 }
 
 /*====== Artsy stuff ======*/
@@ -343,18 +336,16 @@ p {
 .retro-console {
   background-color: var(--main-green-9);
   padding: var(--size-xs);
-  border: var(--big-border);
+  border: solid var(--main-green-1) 4px;;
   border-radius: var(--app-border-radius);
   box-shadow: inset 0 0 12px var(--main-green-2);
   letter-spacing: 1px;
   font-size: 0.8em;
   color: var(--main-green-4);
-  flex: 1 1 50%;
 }
 
-.retro-console.borderless {
-  padding: var(--size-m);
-  border: solid var(--main-green-1) 4px;
+#header .retro-console {
+  font-size: 0.9em;
 }
 
 .retro-console table {
@@ -397,6 +388,7 @@ p {
 }
 
 .interaction-card {
+  padding: var(--size-s);
 }
 
 .interaction-card-title {
@@ -465,6 +457,7 @@ p {
 .game-card {
   position: relative;
   background-color: var(--main-green-9);
+  color: var(--main-green-4);
   font-size: 1.2em;
   letter-spacing: 1px;
   text-align: center;
@@ -480,31 +473,6 @@ p {
   transition: color 0.25s;
 }
 
-.game-card span {
-  color: var(--main-green-4);
-  z-index: 10;
-}
-
-.game-card:hover span {
-  color: var(--main-green-9);
-}
-
-.game-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: var(--main-green-4);
-  z-index: 5;
-  width: 0;
-  height: 100%;
-  transition: width 0.25s;
-}
-
-.game-card:hover::after {
-  width: 100%;
-}
-
 /*====== Device Breakpoints ======*/
 
 /* Extra small devices (phones, 600px and down) */
@@ -512,6 +480,7 @@ p {
 
   :root {
     --big-border: solid var(--beige-dark) 12px;
+    --default-max-width: calc(100vw - 2 * var(--size-s));
   }
 
   body {
@@ -519,7 +488,12 @@ p {
   }
 
   #main-content {
-    max-width: calc(100vw - 2 * var(--size-s));
+
+  }
+
+  #header-content {
+    justify-content: flex-end;
+    margin-right: var(--size-l);
   }
 
   #content-title-bar {
@@ -553,10 +527,6 @@ p {
 
   .retro-console {
     font-size: 1em;
-  }
-
-  .retro-console.borderless {
-    padding: var(--size-xs);
   }
 
   .retro-console th {

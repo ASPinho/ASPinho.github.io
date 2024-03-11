@@ -2,13 +2,13 @@ import React from 'react';
 import DefaultLayout from "../components/layouts/default-layout";
 import PageTitleBar from "../components/page-structure/page-title-bar";
 
-export default App;
+export default HomePage;
 
-function App() {
+function HomePage() {
 
   return (
       <>
-          <DefaultLayout>
+          <DefaultLayout pageTitle={"Root"}>
               <PageTitleBar title="HomePage"/>
           </DefaultLayout>
       </>

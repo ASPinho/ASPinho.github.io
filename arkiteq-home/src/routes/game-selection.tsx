@@ -13,7 +13,7 @@ function GameSelection () {
 
     return (
         <>
-            <DefaultLayout>
+            <DefaultLayout pageTitle={"Game Picker"} hasBackNavigation={true}>
                 <PageTitleBar title="Pick a game" subtitle="To play with your bitch ass friends"/>
                 <PageContent>
                     <div className={"display-flex flex-row-wrap row-gap-m column-gap-m"}>

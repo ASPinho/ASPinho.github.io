@@ -11,7 +11,7 @@ const EkInteractions = () => {
 
     for (let i = 0; i < interactions.length; i++) {
         cards.push(
-            <RetroConsole key={i+1} isBorderless={true}>
+            <RetroConsole key={i+1}>
                 <InteractionCard title={interactions[i].title} subsections={interactions[i].subsections }/>
             </RetroConsole>
         )

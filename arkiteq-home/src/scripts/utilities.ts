@@ -15,7 +15,7 @@ export function getPreviousSiblingYCoord(currElementId : string)  {
     return prevElement.getBoundingClientRect().bottom;
 }
 
-export function setMaxHeightFromSibling (divId : string) {
+export function setMaxHeightFromSibling(divId : string) {
 
     const previousSiblingYCoord = getPreviousSiblingYCoord(divId);
 

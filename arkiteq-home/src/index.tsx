@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import './styles/teriyarki-theme.css';
 import './styles/flex-rules.css'
-import App from './routes/App';
+import HomePage from './routes/home-page';
 import ExplodingKittens from "./routes/exploding-kittens";
 import GameSelection from "./routes/game-selection";
 
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/",
-        element: <App />
+        element: <HomePage />
     }
 ])
 

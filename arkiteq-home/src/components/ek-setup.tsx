@@ -6,13 +6,13 @@ import {getCardsPerSymbol, getPlayersPerSymbol, getZombieApocalypseCards} from "
 const EkSetup = () => {
     return (
         <>
-            <RetroConsole isBorderless={true}>
+            <RetroConsole>
                 <Table data={getPlayersPerSymbol()}/>
             </RetroConsole>
-            <RetroConsole isBorderless={true}>
+            <RetroConsole>
                 <Table data={getCardsPerSymbol()}/>
             </RetroConsole>
-            <RetroConsole isBorderless={true}>
+            <RetroConsole>
                 <Table data={getZombieApocalypseCards()}/>
             </RetroConsole>
         </>
