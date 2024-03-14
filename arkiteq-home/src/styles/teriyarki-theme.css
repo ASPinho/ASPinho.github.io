@@ -293,7 +293,7 @@ p {
 .page-title-tab::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 50%;
   transform: translateX(-50%);
   height: var(--size-2xs);
@@ -355,6 +355,7 @@ p {
 .retro-console table {
   width: 100%;
   max-width: 100%;
+  padding: 0 var(--size-xs);
 }
 
 .retro-console tr{
@@ -576,7 +577,7 @@ p {
   }
 
   .interaction-card {
-    padding: var(--size-xs);
+    padding: var(--size-s) var(--size-m);
   }
 
   .game-card {
