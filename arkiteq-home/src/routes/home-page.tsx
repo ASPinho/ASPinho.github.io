@@ -18,7 +18,7 @@ function HomePage() {
           <DefaultLayout pageTitle={"Root"}>
               <PageTitleBar title="HomePage"/>
               <PageContent>
-                  <div className={"display-flex flex-row-wrap row-gap-m column-gap-m"}>
+                  <div className={"display-flex flex-row-wrap row-gap-m column-gap-xl"}>
                       {menus.map((menu, index) => (
                           <GameCard key={index+1} label={menu.title} onclick={() => navigate(menu.route)}/>
                           ))}

@@ -275,16 +275,17 @@ p {
 .page-title-tabs {
   display: flex;
   background-color: var(--main-green-9);
-  color: var(--main-green-4);
-  border: solid var(--size-xs) var(--main-green-4);
+  color: var(--main-green-0);
+  border: solid var(--size-xs) var(--main-green-1);
   border-radius: var(--app-border-radius);
   overflow: hidden;
+  padding: var(--size-m) var(--size-l);
 }
 
 .page-title-tab {
   position: relative;
   cursor: pointer;
-  padding: var(--size-s) var(--size-l);
+  padding: 0 var(--size-m);
   text-align: center;
   font-weight: bold;
 }
@@ -292,17 +293,17 @@ p {
 .page-title-tab::after {
   content: '';
   position: absolute;
-  bottom: var(--size-s);
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   height: var(--size-2xs);
   width: 0;
-  background-color: var(--main-green-4);
+  background-color: var(--main-green-0);
   transition: width 0.2s ease-out;
 }
 
 .page-title-tab.active::after {
-  width: calc(100% - 2 * var(--size-l));
+  width: calc(100% - 2 * var(--size-s));
 }
 
 .back-chevron {
@@ -319,7 +320,7 @@ p {
   left: 25%;
   height: 40%;
   width: var(--size-2xs);
-  background-color: var(--main-green-4);
+  background-color: var(--main-green-0);
 }
 
 .back-chevron::before {
@@ -365,13 +366,42 @@ p {
   font-size: 1.2em;
 }
 
-.retro-console th:not(:first-of-type),
-.retro-console td:not(:first-of-type){
-  border-left: dashed 2px var(--main-green-4);
+.retro-console th:not(:last-of-type),
+.retro-console td:not(:last-of-type),
+.retro-console tbody tr {
+  position: relative;
 }
 
-.retro-console tbody tr{
-  border-top: dashed 2px var(--main-green-4);
+.retro-console td:not(:last-of-type)::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 100%;
+  border-right: dashed var(--size-2xs) var(--main-green-4);
+}
+
+.retro-console tr:last-of-type td:not(:last-of-type)::before {
+  top: 0;
+  height: calc(100% - var(--size-s));
+}
+
+.retro-console thead th::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: calc(100% - var(--size-s));
+  border-right: dashed var(--size-2xs) var(--main-green-4);
+}
+
+.retro-console tbody tr::before {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--size-2xs) / 2);
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2*var(--size-m));
+  border-top: dashed var(--size-2xs) var(--main-green-4);
 }
 
 .retro-console th,
@@ -391,7 +421,7 @@ p {
 }
 
 .interaction-card {
-  padding: var(--size-s);
+  padding: var(--size-s) var(--size-l);
 }
 
 .interaction-card-title {
@@ -411,12 +441,16 @@ p {
 }
 
 .interaction-card-subsection {
-  padding: var(--size-xs) var(--size-m);
-  border: dashed 2px var(--main-green-4);
+  position: relative;
+  padding: var(--size-xs) 0;
 }
 
-.interaction-card-subsection:not(:last-of-type) {
-  margin-bottom: var(--size-m);
+.interaction-card-subsection::before {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--size-2xs) / 2);
+  width: 100%;
+  border-top: dashed var(--size-2xs) var(--main-green-4);
 }
 
 .interaction-card-subtitle {
@@ -465,8 +499,8 @@ p {
   letter-spacing: 1px;
   text-align: center;
   cursor: pointer;
-  border-left: solid var(--size-s) var(--main-green-4);
-  border-bottom: solid var(--size-s) var(--main-green-4);
+  border-right: solid var(--size-s) var(--main-green-1);
+  border-bottom: solid var(--size-s) var(--main-green-1);
   border-radius: var(--app-border-radius);
   padding: var(--size-l) var(--size-xl);
   flex: 1 1 20%;
