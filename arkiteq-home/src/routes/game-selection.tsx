@@ -16,7 +16,7 @@ function GameSelection () {
             <DefaultLayout pageTitle={"Game Picker"} hasBackNavigation={true}>
                 <PageTitleBar title="Pick a game" subtitle="To play with your bitch ass friends"/>
                 <PageContent>
-                    <div className={"display-flex flex-row-wrap row-gap-m column-gap-xl"}>
+                    <div className={"display-flex flex-row-wrap row-gap-l column-gap-xl"}>
                         {games.map((game,index) => (
                             <GameCard key={index+1} label={game.title} onclick={() => navigate(game.route)}/>
                         ))}
