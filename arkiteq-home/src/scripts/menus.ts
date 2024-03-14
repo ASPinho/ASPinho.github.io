@@ -8,7 +8,7 @@ export function getHomePageMenus() {
     return [
         {
             title: "GamePicker",
-            route: "/gamepicker"
+            route: "/game-picker"
         },
         {
             title: "Resume",
