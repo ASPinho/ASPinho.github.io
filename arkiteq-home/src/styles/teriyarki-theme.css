@@ -3,7 +3,6 @@
 
 :root {
 
-
   --beige-0: #FFF8E7;
   --beige: #F9EFDB;
   --beige-mid: #ECE7CA;
@@ -17,11 +16,15 @@
   --gray-darker: #737373;
   --gray-darkest: #3D3D3D;
 
-  --main-green-0: #1A4C39;
-  --main-green-1: #1b842c;
-  --main-green-2: #3aab58;
+  --main-green-0: #A7E4BC;
+  --main-green-1: #87D06C;
+  --main-green-2: #BDFF3F;
   --main-green-3: #4fc879;
-  --main-green-4: #A7E4BC;
+  --main-green-4: #A7E4BC; /* currently editing */
+  --main-green-5: #4fc879;
+  --main-green-6: #3aab58;
+  --main-green-7: #1b842c;
+  --main-green-8: #1A4C39;
   --main-green-9: #0F2C1F;
 
   --faded-green: rgba(27, 132, 44, 0.2);
@@ -44,7 +47,7 @@
   --size-xl: 32px;
 
   --app-border-radius: 32px;
-  --default-max-width: 1280px;
+  --view-width-padding: 720px;
 }
 
 html {
@@ -59,8 +62,8 @@ html, body, p {
 
 body {
   height: 100%;
-  background-color: var(--beige-0);
-  color: var(--main-green-9);
+  background-color: var(--main-green-9);
+  color: var(--main-green-4);
   font-size: var(--font-m);
   font-family: 'Changa', sans-serif;
   overflow: hidden;
@@ -208,7 +211,7 @@ p {
   text-align: center;
   font-size: 1.2em;
   letter-spacing: 1px;
-  width: var(--default-max-width);
+  width: calc(100vw - var(--view-width-padding));
 }
 
 #header-content {
@@ -225,8 +228,8 @@ p {
 
 #main-content {
   width: 100%;
-  max-width: var(--default-max-width);
-  margin: 90px auto 0;
+  max-width: calc(100vw - var(--view-width-padding));
+  margin: 122px auto 0;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -338,10 +341,10 @@ p {
   padding: var(--size-xs);
   border: solid var(--main-green-1) 4px;;
   border-radius: var(--app-border-radius);
-  box-shadow: inset 0 0 12px var(--main-green-2);
+  box-shadow: inset 0 0 12px var(--main-green-1);
   letter-spacing: 1px;
   font-size: 0.8em;
-  color: var(--main-green-4);
+  color: var(--main-green-0);
 }
 
 #header .retro-console {
@@ -480,7 +483,7 @@ p {
 
   :root {
     --big-border: solid var(--beige-dark) 12px;
-    --default-max-width: calc(100vw - 2 * var(--size-s));
+    --view-width-padding: calc(2 * var(--size-s));
   }
 
   body {
@@ -488,7 +491,7 @@ p {
   }
 
   #main-content {
-
+    margin-top: 90px;
   }
 
   #header-content {
