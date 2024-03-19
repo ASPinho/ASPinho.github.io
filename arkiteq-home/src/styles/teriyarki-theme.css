@@ -235,6 +235,11 @@ p {
   flex: 1;
 }
 
+#announcement-layout {
+  display: flex;
+  line-height: 1;
+}
+
 #content-title-bar {
   display: flex;
   margin-bottom: var(--size-l);
