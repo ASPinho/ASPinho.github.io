@@ -6,6 +6,7 @@ import './styles/flex-rules.css'
 import HomePage from './routes/home-page';
 import ExplodingKittens from "./routes/exploding-kittens";
 import GameSelection from "./routes/game-selection";
+import Ffg from "./routes/ffg";
 
 const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
     {
         path: "game-picker",
         element: <GameSelection />
+    },
+    {
+        path: "ffg",
+        element: <Ffg />
     },
     {
         path: "/",

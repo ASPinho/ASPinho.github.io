@@ -511,6 +511,12 @@ p {
   transition: color 0.25s;
 }
 
+.announcement-card-time {
+  font-size: 60px;
+  letter-spacing: var(--size-2xs);
+  text-shadow: var(--main-green-1) 1px 1px 10px;
+}
+
 /*====== Device Breakpoints ======*/
 
 /* Extra small devices (phones, 600px and down) */
