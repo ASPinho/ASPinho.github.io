@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from "react";
+import {convertAndPadTime} from "../scripts/utilities";
+import moment from "moment";
 
 export interface AnnouncementCard {
     title: string;
@@ -8,9 +10,9 @@ export interface AnnouncementCard {
 
 type countdownTimer = {
     days: number;
-    hours: number;
-    minutes: number;
-    seconds: number;
+    hours: string;
+    minutes: string;
+    seconds: string;
 }
 
 function AnnouncementCard (props: AnnouncementCard) {
@@ -24,9 +26,9 @@ function AnnouncementCard (props: AnnouncementCard) {
         if (difference > 0) {
             timeLeft = {
                 days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-                minutes: Math.floor((difference / 1000 / 60) % 60),
-                seconds: Math.floor((difference / 1000) % 60),
+                hours: convertAndPadTime(Math.floor((difference / (1000 * 60 * 60)) % 24)),
+                minutes: convertAndPadTime(Math.floor((difference / 1000 / 60) % 60)),
+                seconds: convertAndPadTime(Math.floor((difference / 1000) % 60)),
             };
         }
 
@@ -43,18 +45,24 @@ function AnnouncementCard (props: AnnouncementCard) {
         return () => clearTimeout(timer);
     });
 
+    let momentDate = moment(props.dateTime).format("MMM Do YYYY - ha");
+
+
     return (
-        <div className={"full-center-flex flex-column-wrap"}>
-            <div className={"font-size-heading1"}>
+        <div className={"vertical-align flex-column padding-xl"}>
+            <div className={"announcement-card__title"}>
                 {props.title}
             </div>
-            <div className={"font-size-l"}>
-                {props.description}
-            </div>
-            <div className={"announcement-card-time"}>
+            <div className={"announcement-card__time"}>
                 <span>
                     {currTimeLeft.days}:{currTimeLeft.hours}:{currTimeLeft.minutes}:{currTimeLeft.seconds}
                 </span>
+            </div>
+            <div className={"announcement-card__moment"}>
+                @ {momentDate}
+            </div>
+            <div className={"announcement-card__description"}>
+                {props.description}
             </div>
         </div>
     )

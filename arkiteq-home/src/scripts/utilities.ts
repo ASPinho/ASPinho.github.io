@@ -26,3 +26,10 @@ export function setMaxHeightFromSibling(divId : string) {
         currElement!.setAttribute("style", "max-height: " + (window.innerHeight - previousSiblingYCoord - 20) + "px");
     }
 }
+
+export function convertAndPadTime (time: number) {
+
+    let convertedTime = time.toString().padStart(2, "0");
+
+    return convertedTime;
+}

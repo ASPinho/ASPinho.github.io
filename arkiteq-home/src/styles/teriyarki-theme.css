@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
 
 :root {
 
@@ -88,12 +89,12 @@ p {
 
 /*====== Margins ======*/
 /*=== All Sides ===*/
-.margin-all-2xs { margin: var(--size-2xs); }
-.margin-all-xs { margin: var(--size-xs); }
-.margin-all-s { margin: var(--size-s); }
-.margin-all-m { margin: var(--size-m); }
-.margin-all-l { margin: var(--size-l); }
-.margin-all-xl { margin: var(--size-xl); }
+.margin-2xs { margin: var(--size-2xs); }
+.margin-xs { margin: var(--size-xs); }
+.margin-s { margin: var(--size-s); }
+.margin-m { margin: var(--size-m); }
+.margin-l { margin: var(--size-l); }
+.margin-xl { margin: var(--size-xl); }
 
 /*=== Right ===*/
 .margin-right-2xs { margin-right: var(--size-2xs); }
@@ -129,12 +130,12 @@ p {
 
 /*====== Paddings ======*/
 /*=== All Sides ===*/
-.padding-all-2xs { padding: var(--size-2xs); }
-.padding-all-xs { padding: var(--size-xs); }
-.padding-all-s { padding: var(--size-s); }
-.padding-all-m { padding: var(--size-m); }
-.padding-all-l { padding: var(--size-l); }
-.padding-all-xl { padding: var(--size-xl); }
+.padding-2xs { padding: var(--size-2xs); }
+.padding-xs { padding: var(--size-xs); }
+.padding-s { padding: var(--size-s); }
+.padding-m { padding: var(--size-m); }
+.padding-l { padding: var(--size-l); }
+.padding-xl { padding: var(--size-xl); }
 
 /*=== Right ===*/
 .padding-right-2xs { padding-right: var(--size-2xs); }
@@ -236,8 +237,14 @@ p {
 }
 
 #announcement-layout {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   line-height: 1;
+  justify-content: center;
+  text-shadow: var(--main-green-1) 1px 1px 10px;
 }
 
 #content-title-bar {
@@ -516,10 +523,54 @@ p {
   transition: color 0.25s;
 }
 
-.announcement-card-time {
-  font-size: 60px;
+.announcement-card__title {
+  position: relative;
+  font-family: "Kolker Brush", cursive;
+  font-size: 9em;
+  text-align: center;
+  margin: 60px 0;
+  padding: var(--size-l);
+  max-width: 500px;
+}
+
+.announcement-card__title::before,
+.announcement-card__title::after {
+  position: absolute;
+  content: '';
+  height: 35%;
+  width: 45%;
+}
+
+.announcement-card__title::before {
+  left: 0;
+  top: 0;
+  border-left: dashed var(--size-xs) var(--main-green-1);
+  border-top: dashed var(--size-xs) var(--main-green-1);
+}
+
+.announcement-card__title::after {
+  right: 0;
+  bottom: 0;
+  border-right: dashed var(--size-xs) var(--main-green-1);
+  border-bottom: dashed var(--size-xs) var(--main-green-1);
+}
+
+.announcement-card__description {
+  font-size: var(--size-l);
+}
+
+.announcement-card__time {
+  font-size: 6em;
+  text-align: center;
   letter-spacing: var(--size-2xs);
-  text-shadow: var(--main-green-1) 1px 1px 10px;
+  margin-bottom: 120px;
+}
+
+.announcement-card__moment {
+  text-align: left;
+  font-size: var(--size-xl);
+  width: 100%;
+  margin-bottom: var(--size-m);
 }
 
 /*====== Device Breakpoints ======*/
