@@ -1,3 +1,4 @@
 https://arkiteq.dev/
 https://arkiteq.dev/?/game-picker
 https://arkiteq.dev/?/game-picker/ek
+https://arkiteq.dev/?/ffg
