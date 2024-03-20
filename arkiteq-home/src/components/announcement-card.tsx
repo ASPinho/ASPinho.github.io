@@ -49,7 +49,7 @@ function AnnouncementCard (props: AnnouncementCard) {
 
 
     return (
-        <div className={"vertical-align flex-column padding-xl"}>
+        <div className={"announcement-card"}>
             <div className={"announcement-card__title"}>
                 {props.title}
             </div>

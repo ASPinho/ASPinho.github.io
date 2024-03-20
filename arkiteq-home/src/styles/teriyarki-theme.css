@@ -523,10 +523,17 @@ p {
   transition: color 0.25s;
 }
 
+.announcement-card {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: var(--size-xl);
+}
+
 .announcement-card__title {
   position: relative;
   font-family: "Kolker Brush", cursive;
-  font-size: 9em;
+  font-size: 124px;
   text-align: center;
   margin: 60px 0;
   padding: var(--size-l);
@@ -556,11 +563,11 @@ p {
 }
 
 .announcement-card__description {
-  font-size: var(--size-l);
+  font-size: var(--font-xl);
 }
 
 .announcement-card__time {
-  font-size: 6em;
+  font-size: 80px;
   text-align: center;
   letter-spacing: var(--size-2xs);
   margin-bottom: 120px;
@@ -568,7 +575,7 @@ p {
 
 .announcement-card__moment {
   text-align: left;
-  font-size: var(--size-xl);
+  font-size: var(--font-heading3);
   width: 100%;
   margin-bottom: var(--size-m);
 }
@@ -645,6 +652,34 @@ p {
   .game-card {
     font-size: 1.4em;
     flex-basis: 100%;
+  }
+
+  #announcement-layout {
+    width: calc(100vw - var(--size-xl));
+  }
+
+  .announcement-card {
+    padding: var(--size-m) var(--size-l);
+  }
+
+  .announcement-card__title {
+    margin-top: var(--size-m);
+    font-size: 80px;
+  }
+
+  .announcement-card__time {
+    font-size: 52px;
+    margin-bottom: 80px;
+  }
+
+  .announcement-card__moment {
+    font-size: var(--font-l);
+  }
+
+  .announcement-card__description {
+    font-size: var(--font-s);
+    line-height: 1.2;
+    margin-bottom: var(--size-m);
   }
 }
 
