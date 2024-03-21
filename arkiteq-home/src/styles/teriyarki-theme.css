@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
 
+@font-face {
+  font-family: 'Bornneo';
+  src: url("../fonts/Bornneo.woff2") format("woff2"),
+       url("../fonts/Bornneo.woff") format("woff");
+}
+
 :root {
 
   --beige-0: #FFF8E7;
@@ -532,8 +538,8 @@ p {
 
 .announcement-card__title {
   position: relative;
-  font-family: "Kolker Brush", cursive;
-  font-size: 124px;
+  font-family: "Bornneo", sans-serif;
+  font-size: 120px;
   text-align: center;
   margin: 60px 0;
   padding: var(--size-l);
