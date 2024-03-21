@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.3660ace2.css",
+    "main.css": "/static/css/main.dccde60f.css",
     "main.js": "/static/js/main.78ed19c9.js",
     "static/media/Bornneo.woff": "/static/media/Bornneo.f11f0f1b7cca98b7a9d6.woff",
     "static/media/Bornneo.woff2": "/static/media/Bornneo.15a2294c9c73aa09916e.woff2",
     "index.html": "/index.html",
-    "main.3660ace2.css.map": "/static/css/main.3660ace2.css.map",
+    "main.dccde60f.css.map": "/static/css/main.dccde60f.css.map",
     "main.78ed19c9.js.map": "/static/js/main.78ed19c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.3660ace2.css",
+    "static/css/main.dccde60f.css",
     "static/js/main.78ed19c9.js"
   ]
 }
