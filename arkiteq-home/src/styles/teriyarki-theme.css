@@ -541,9 +541,9 @@ p {
   font-family: "Bornneo", sans-serif;
   font-size: 120px;
   text-align: center;
-  margin: 60px 0;
-  padding: var(--size-l);
-  max-width: 500px;
+  margin: 60px 90px;
+  padding: var(--size-xl);
+  max-width: 600px;
 }
 
 .announcement-card__title::before,
@@ -570,6 +570,7 @@ p {
 
 .announcement-card__description {
   font-size: var(--font-xl);
+  width: 100%;
 }
 
 .announcement-card__time {
@@ -580,7 +581,6 @@ p {
 }
 
 .announcement-card__moment {
-  text-align: left;
   font-size: var(--font-heading3);
   width: 100%;
   margin-bottom: var(--size-m);
@@ -669,7 +669,7 @@ p {
   }
 
   .announcement-card__title {
-    margin-top: var(--size-m);
+    margin: var(--size-m) 0 60px;
     font-size: 80px;
   }
 
