@@ -353,7 +353,7 @@ p {
   rotate: -45deg;
 }
 
-/*====== Artsy stuff ======*/
+/*====== Retro Console ======*/
 
 .retro-console {
   background-color: var(--main-green-9);
@@ -439,6 +439,8 @@ p {
   flex: 1 1 26%;
 }
 
+/*====== Interaction Card ======*/
+
 .interaction-card {
   padding: var(--size-s) var(--size-l);
 }
@@ -510,6 +512,8 @@ p {
   transform: translate(-50%, -50%) rotate(-90deg);
 }
 
+/*====== Game Card ======*/
+
 .game-card {
   position: relative;
   background-color: var(--main-green-9);
@@ -528,6 +532,8 @@ p {
   justify-content: center;
   transition: color 0.25s;
 }
+
+/*====== Announcement Card ======*/
 
 .announcement-card {
   display: flex;
