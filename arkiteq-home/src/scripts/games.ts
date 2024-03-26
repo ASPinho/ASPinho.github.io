@@ -214,9 +214,17 @@ export function getGames() {
             title: "Secret Code",
             genres: ["Clue Deduction", "Team Play"],
             averageDuration: 45,
-            minPlayers: 1,
-            maxPlayers: 6,
+            minPlayers: 4,
+            maxPlayers: 8,
             route: "secret-code"
+        },
+        {
+            title: "Downforce",
+            genres: ["Racing"],
+            averageDuration: 30,
+            minPlayers: 2,
+            maxPlayers: 6,
+            route: "downforce"
         }
     ]
 
