@@ -53,7 +53,7 @@
   --size-l: 20px;
   --size-xl: 32px;
 
-  --app-border-radius: 32px;
+  --app-border-radius: 6px;
   --view-width-padding: 720px;
 }
 
@@ -522,8 +522,7 @@ p {
   letter-spacing: 1px;
   text-align: center;
   cursor: pointer;
-  border-right: solid var(--size-s) var(--main-green-1);
-  border-bottom: solid var(--size-s) var(--main-green-1);
+  border: solid var(--size-s) var(--main-green-1);
   border-radius: var(--app-border-radius);
   padding: var(--size-l) var(--size-xl);
   flex: 1 1 20%;
